@@ -8,7 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%-unless current_page?(root_path) %>
+	<%= render 'layouts/menubar' %>
+<% end %>
 <%= yield %>
 
 </body>

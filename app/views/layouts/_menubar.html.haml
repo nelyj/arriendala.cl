@@ -1,0 +1,9 @@
+%nav.navbar#main-menu
+	.row
+
+		%a.toggle{"gumby-trigger"=> "#nav > ul"}
+			%i.icon-menu
+
+		%h1.four.columns.logo
+			=link_to root_path do
+				=image_tag "logo.svg", width: "155"

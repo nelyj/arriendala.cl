@@ -1,3 +1,147 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700,800);
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+section{
+	width: 100%;
+	height: 720px;
+	&#main{
+		background: url('/assets/main.jpg') no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  border-bottom: 0.3em solid #F7961D;
+
+	  .logo-main{
+	  	margin-top: 5em;
+	  	margin-bottom: 0em;
+	  }
+
+	  h1{
+	  	font-size: 3.4em;
+	  	color: white;
+	  	font-weight: 300;
+	  	text-transform: uppercase;
+	  	margin-bottom: 1em;
+
+	  	strong{
+	  		&.optional{
+	  			font-weight: 700;
+	  		}
+	  		font-weight: 800;
+	  	}
+	  }
+	}
+
+	&#welcome{
+		background-color: #ecf0f1;
+		border-bottom: 0.3em solid #F7961D;
+		height: 620px;
+
+		h2{
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: 2.5em;
+			padding: 1em 0em;
+
+			&strong{
+				font-weight: 700;
+			}
+		}
+
+		p{
+			font-size: 1.1em;
+			font-weight: 300;
+			strong{
+				font-weight: 500;
+			}
+		}
+	}
+
+	&#how_to_do{
+		height: 650px;
+		background-color: #FFA637;
+		border-bottom: 0.3em solid #F7961D;
+
+		h2{
+			font-size: 2.9em;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 300;
+			padding: 0.5em 0em;
+			color: whitesmoke;
+			&strong{
+				font-weight: 700;
+			}
+		}
+
+		p{
+			font-size: 1.8em;
+			color: whitesmoke;
+			font-weight: 300;
+
+		}
+	}
+
+	&#features{
+		h2{
+			font-size: 2.9em;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 300;
+			padding: 1em 0em;
+		}
+	}
+
+
+	&.title{
+		height: 300px; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+		background: url('/assets/place_two.jpg') no-repeat center center fixed;
+		border-bottom: 0.3em solid #F7961D;
+		&.feature{
+			background: url('/assets/place_last.jpg') no-repeat center center fixed;
+		}
+	}
+}
+
+.circle {
+	margin-left: 40px;
+    width: 240px;
+    height: 240px;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+    background: #4679BD;
+}
+
+
+.right{
+	float: right;
+}
+
+.center{
+	text-align: center;
+	h3{
+		color: whitesmoke;
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: 1em;
+		padding-top: 2em;
+		padding-bottom: 1.5em;
+
+		strong{
+			font-weight: 700;
+		}
+	}
+}
