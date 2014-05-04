@@ -1,0 +1,21 @@
+.row
+	.centered.five.columns
+		%h1 Registrate
+		= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+			%fieldset
+				%legend Datos Personales
+				.row
+					.centered.twelve.columns
+						%ul
+							%li.field
+								= f.error_notification
+							%li.field
+								= f.input :email, required: true, autofocus: true, label: false, placeholder: 'Correo Electrónico'
+							%li.field
+								= f.input :password, required: true, label: false, placeholder: 'Contraseña'
+							%li.field
+								= f.input :password_confirmation, required: true, label: false, placeholder: 'Confirme su contraseña'
+			
+							.medium.warning.btn.icon-left.entypo.icon-mail
+								= f.button :submit, "Registrarse"
+		= render "devise/shared/links"
