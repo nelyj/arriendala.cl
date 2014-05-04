@@ -4,6 +4,13 @@ SquapeCom::Application.routes.draw do
 
 
   devise_for :users
+
+  devise_scope :user do
+    get 'auth/registrar', to: 'devise/registrations#new', as: :registrar
+    get 'auth/iniciar', to: 'devise/sessions#new', as: :login
+    get 'logout', to: 'devise/sessions#destroy', as: :logout
+  end
+
   root :to => 'pages#home'
 
 end
