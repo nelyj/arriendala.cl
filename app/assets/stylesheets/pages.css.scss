@@ -68,7 +68,7 @@ section{
 	&#how_to_do{
 		height: 650px;
 		background-color: #FFA637;
-		border-bottom: 0.3em solid #F7961D;
+		border-bottom: 0.5em solid #F7961D;
 
 		h2{
 			font-size: 2.9em;
@@ -77,20 +77,24 @@ section{
 			font-weight: 300;
 			padding: 0.5em 0em;
 			color: whitesmoke;
+
 			&strong{
 				font-weight: 700;
 			}
 		}
 
 		p{
+			padding-top: 2.5em;
 			font-size: 1.8em;
 			color: whitesmoke;
 			font-weight: 300;
+			text-transform: uppercase;
 
 		}
 	}
 
 	&#features{
+		border-bottom: 0.5em solid #F7961D;
 		h2{
 			font-size: 2.9em;
 			text-align: center;
@@ -100,18 +104,47 @@ section{
 		}
 	}
 
+	&#resource_people{
+		border-bottom: 2em solid #F7961D;
+		h2{
+			font-size: 2.9em;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 300;
+			padding: 1em 0em;
+		}
+	}
+
+	&#login{
+		background-color: #FFA637;
+		height: 415px;
+		h2{
+			color: whitesmoke;
+			font-size:2.9em;
+			font-weight: 300;
+			text-transform: uppercase;
+			padding: 1em 0em;
+		}
+	}
+
 
 	&.title{
-		height: 300px; 
+		height: 450px; 
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-		background: url('/assets/place_two.jpg') no-repeat center center fixed;
-		border-bottom: 0.3em solid #F7961D;
+		background: url('/assets/place_two.png') no-repeat center center fixed;
+		border-bottom:0.5em solid #F7961D;
 		&.feature{
-			background: url('/assets/place_last.jpg') no-repeat center center fixed;
+			background: url('/assets/vina_del_mar.png') no-repeat center center fixed;
 		}
+
+		&.login{
+			background: url('/assets/torre_entel.png') no-repeat center center fixed;
+		}
+
+
 	}
 }
 
@@ -144,4 +177,14 @@ section{
 			font-weight: 700;
 		}
 	}
+}
+
+
+.fixed-size-facebook{
+	margin-top: 110px;
+}
+
+.fixed-margin-left{
+	margin-left: 0px;
+	margin-top: 20px;
 }
