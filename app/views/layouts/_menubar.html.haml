@@ -7,3 +7,9 @@
 		%h1.four.columns.logo
 			=link_to root_path do
 				=image_tag "logo.svg", width: "155"
+		%nav.seven.columns.pull_right
+			%ul#main-nave.right
+				-if user_signed_in?
+					%li=link_to "Salir", destroy_user_session_path, :method => :delete
+				-else
+					%li=link_to "Registrate", "#"
