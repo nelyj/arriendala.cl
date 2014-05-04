@@ -1,6 +1,6 @@
 .row
-	.centered.five.columns
-		%h1 Registrate
+	.five.columns
+		%h2 Registrate
 		= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
 			%fieldset
 				%legend Datos Personales
@@ -18,4 +18,21 @@
 			
 							.medium.warning.btn.icon-left.entypo.icon-mail
 								= f.button :submit, "Registrarse"
-		= render "devise/shared/links"
+
+	.push_two.five.columns
+		%h2 Iniciar Sesion
+		= simple_form_for(resource, as: resource_name, url: session_path(resource_name) ) do |f|
+			%fieldset
+				%legend Ingresa tus cuentas
+				.row
+					.centered.twelve.columns
+						%ul
+							%li.field
+								= f.input :email, required: false, autofocus: true, label: false, placeholder: 'Correo Electrónico'
+							%li.field
+								= f.input :password, required: false, label: false, placeholder: 'Contraseña'
+							%li
+								= f.input :remember_me, as: :boolean, label: 'Recordar sesion' if devise_mapping.rememberable?
+							.medium.warning.btn.icon-left.entypo.icon-mail
+								= f.button :submit, "Iniciar sesion"
+		

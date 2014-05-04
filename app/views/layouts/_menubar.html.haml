@@ -12,4 +12,6 @@
 				-if user_signed_in?
 					%li=link_to "Salir", destroy_user_session_path, :method => :delete
 				-else
-					%li=link_to "Registrate", "#"
+					%li
+						.medium.secondary.btn
+							=link_to "Unete Ahora", registrar_path
