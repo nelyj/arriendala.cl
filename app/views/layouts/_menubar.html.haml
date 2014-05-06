@@ -11,6 +11,7 @@
 			%ul#main-nave.right
 				-if user_signed_in?
 					%li=link_to "Salir", destroy_user_session_path, :method => :delete
+					%li=link_to "Profile", edit_user_registration_path
 				-else
 					%li
 						.medium.secondary.btn

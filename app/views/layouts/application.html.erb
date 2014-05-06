@@ -10,8 +10,16 @@
 <body>
 <%-unless current_page?(root_path) %>
 	<%= render 'layouts/menubar' %>
+	<div class="row">
+		<div class="twelve column">
+			<%= yield %>
+		</div>
+	</div>
+
+<%- else %>
+		<%= yield %>
 <% end %>
-<%= yield %>
+
 
 </body>
 </html>

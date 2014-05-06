@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   has_many :publications
   has_one :person
 
+  accepts_nested_attributes_for :person
 
   private
   

@@ -1,0 +1,24 @@
+=debug @user
+
+=simple_form_for @user, :url => perfil_index_path do |f|
+	%fieldset
+		%legend Datos Personales
+		.row
+			.twelve.columns
+				%ul
+					%li.field
+						=f.error_notification
+		
+
+		.row
+			.twelve.columns
+				=f.simple_fields_for(:person) do |person_form|
+					.row
+						.six.columns
+							%ul
+								%li.field	
+									=person_form.input :name, label: false, placeholder: 'Nombres'
+						.six.columns
+							%ul
+								%li.field
+									=person_form.input :last_name, label: false, placeholder: 'Apellidos'

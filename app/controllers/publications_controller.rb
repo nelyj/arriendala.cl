@@ -1,5 +1,6 @@
 class PublicationsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :validates_profile
   # GET /publications
   # GET /publications.json
   def index
@@ -80,5 +81,10 @@ class PublicationsController < ApplicationController
       format.html { redirect_to publications_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+  def validates_profile
+    redirect_to perfil_informacion_path if current_user.person.nil?
   end
 end

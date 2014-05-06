@@ -1,8 +1,8 @@
 SquapeCom::Application.routes.draw do
 
-  resources :publications
 
-
+  resources :publicaciones, :controller => "publications"
+  resources :perfil, :controller=> "profile"
   devise_for :users
 
   devise_scope :user do
@@ -12,5 +12,8 @@ SquapeCom::Application.routes.draw do
   end
 
   root :to => 'pages#home'
+
+  match '/dashboard', :to => 'publications#show', :as => :dashboard
+  match '/informacion/perfil', :to => 'profile#informacion', :as => :perfil_informacion
 
 end
