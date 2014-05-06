@@ -1,5 +1,3 @@
-=debug @user
-
 =simple_form_for @user, :url => perfil_index_path do |f|
 	%fieldset
 		%legend Datos Personales
@@ -18,7 +16,19 @@
 							%ul
 								%li.field	
 									=person_form.input :name, label: false, placeholder: 'Nombres'
+								%li.field
+									=person_form.input :gender, collection: ["Hombre","Mujer"], label: false, prompt: "Cual es tu sexo"
+								%li.field
+									=person_form.input :current_live, label: false, placeholder: 'Dónde vives actualmente ?. Ej. Providencia'
 						.six.columns
 							%ul
 								%li.field
 									=person_form.input :last_name, label: false, placeholder: 'Apellidos'
+
+								%li.field
+									=person_form.input :married, collection: [["Si", true], ["No", false]],  prompt: "Estas casado ?", label: false
+								%li.field
+									=person_form.input :current_live, label: false, placeholder: 'Dónde vives actualmente ?. Ej. Providencia'
+							
+								.medium.warning.btn.icon-left.entypo.icon-mail
+									= f.button :submit, "Guardar"
