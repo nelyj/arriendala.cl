@@ -7,7 +7,19 @@ class ProfileController < ApplicationController
   end
 
   def create
-  	@person = Person.new(param[:person])
+  	@person = current_user.build_person(params[:person])
+
+    respond_to do |format|
+      if @person.save
+        format.html { redirect_to root_path }
+      else
+        format.html { render action: "informacion" }
+      end
+    end
+  end
+
+  def update
+    redirect_to root_path
   end
 
   def informacion
