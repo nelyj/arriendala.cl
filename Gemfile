@@ -20,6 +20,7 @@ group :assets do
 	gem 'gumby-framework'
 end
 
+gem 'angularjs-rails'
 gem 'jquery-rails'
 gem 'haml'
 gem 'haml-rails'

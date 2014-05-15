@@ -14,4 +14,4 @@
 //= require jquery_ujs
 //= require modernizr
 //= require gumby
-//= require_tree .
+//= require app

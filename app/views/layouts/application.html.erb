@@ -3,23 +3,23 @@
 <head>
   <title>SquapeCom</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false" %>
   <%= javascript_include_tag "application" %>
   <%= javascript_include_tag :modernizr %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 <%-unless current_page?(root_path) %>
 	<%= render 'layouts/menubar' %>
-	<div class="row">
-		<div class="twelve column">
-			<%= yield %>
-		</div>
+
+	<%= yield %>
+
 	</div>
 
 <%- else %>
 		<%= yield %>
 <% end %>
-
 
 </body>
 </html>

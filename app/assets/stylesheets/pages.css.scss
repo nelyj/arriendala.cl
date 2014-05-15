@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700,800);
 
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body{
 	font-family: 'Open Sans', sans-serif;
 }
@@ -143,8 +149,6 @@ section{
 		&.login{
 			background: url('/assets/torre_entel.png') no-repeat center center fixed;
 		}
-
-
 	}
 }
 
@@ -190,6 +194,7 @@ section{
 }
 
 .navbar{
+	margin-bottom: 0px;
 	ul{
 		li{
 			.btn{
@@ -197,4 +202,14 @@ section{
 			}
 		}
 	}	
+}
+
+nav{
+	height: 65px;
+}
+
+.navbar ul li > a{
+	text-shadow: none !important;
+	font-size: 0.9em;
+	text-transform: uppercase;
 }
