@@ -3,6 +3,12 @@ var app = angular.module("appCtrl", []);
 app.controller('HomeCtrl', ['$scope', function($scope) {
   $scope.example = 'Hola!';
   $scope.isMenu = true;
+  $scope.isMap = function(){
+    if ($scope.isMenu){
+      return true;
+    }
+  };
+
 
 
 
