@@ -1,6 +1,5 @@
 SquapeCom::Application.routes.draw do
 
-
   resources :publicaciones, :controller => "publications"
   resources :perfil, :controller=> "profile"
   devise_for :users

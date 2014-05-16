@@ -15,4 +15,3 @@
 //= require modernizr
 //= require gumby
 //= require app
-
