@@ -53,6 +53,7 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    geocoder (1.2.0)
     gumby-framework (0.0.1)
       jquery-rails
       modernizr-rails
@@ -146,6 +147,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   country_select
   devise
+  geocoder
   gumby-framework
   haml
   haml-rails
