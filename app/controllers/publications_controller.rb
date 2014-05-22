@@ -4,7 +4,7 @@ class PublicationsController < ApplicationController
   # GET /publications
   # GET /publications.json
   def index
-    @publications = Publication.all
+    @publications = current_user.publications
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +15,7 @@ class PublicationsController < ApplicationController
   # GET /publications/1
   # GET /publications/1.json
   def show
-    @publication = Publication.find(params[:id])
+    @publication = current_user.publications.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -26,7 +26,7 @@ class PublicationsController < ApplicationController
   # GET /publications/new
   # GET /publications/new.json
   def new
-    @publication = Publication.new
+    @publication = current_user.publications.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,13 +36,13 @@ class PublicationsController < ApplicationController
 
   # GET /publications/1/edit
   def edit
-    @publication = Publication.find(params[:id])
+    @publication = current_user.publications.find(params[:id])
   end
 
   # POST /publications
   # POST /publications.json
   def create
-    @publication = Publication.new(params[:publication])
+    @publication = current_user.publications.new(params[:publication])
 
     respond_to do |format|
       if @publication.save
@@ -58,7 +58,7 @@ class PublicationsController < ApplicationController
   # PUT /publications/1
   # PUT /publications/1.json
   def update
-    @publication = Publication.find(params[:id])
+    @publication = current_user.publications.find(params[:id])
 
     respond_to do |format|
       if @publication.update_attributes(params[:publication])
@@ -74,7 +74,7 @@ class PublicationsController < ApplicationController
   # DELETE /publications/1
   # DELETE /publications/1.json
   def destroy
-    @publication = Publication.find(params[:id])
+    @publication = current_user.publications.find(params[:id])
     @publication.destroy
 
     respond_to do |format|
@@ -84,6 +84,7 @@ class PublicationsController < ApplicationController
   end
 
   private
+  
   def validates_profile
     redirect_to perfil_informacion_path if current_user.person.nil?
   end

@@ -1,9 +1,8 @@
 = simple_form_for @publication, :url => publicaciones_path do |f|
   = f.error_notification
 
-  .form-inputs
-    = f.input :title
-    = f.input :description
+  = f.input :title
+  = f.input :description
+  = f.input :address
 
-  .form-actions
-    = f.button :submit
+  = f.button :submit
