@@ -1,14 +1,15 @@
 //= require angular
+//= require angular-animate
 //= require angular-resource
 //= require angular-route
 //= require angular-touch
-//= require_tree ./angular/directives
+//= require_tree ./angular/models
 //= require_tree ./angular/controllers
-//= require_tree ./angular/services
+//= require_tree ./angular/directives
 //= require underscore-min
 //= require angular-google-maps.min
 
-app = angular.module('squapeApp', ['ngRoute', 'appCtrl', 'google-maps', 'ngTouch']);
+app = angular.module('squapeApp', ['ngAnimate' , 'ngRoute', 'ngResource','PublicationService','appCtrl', 'google-maps', 'ngTouch']);
 
 app.config(['$routeProvider','$locationProvider', 
 	function($routeProvider,$locationProvider){
@@ -16,7 +17,7 @@ app.config(['$routeProvider','$locationProvider',
 		$routeProvider.
 		when('/publicaciones',{
 			templateUrl: '../assets/index.html',
-			controller: 'HomeCtrl'
+			controller: 'PublicationCtrl'
 		}).
 		otherwise({
 			redirectTo: '/publicaciones'

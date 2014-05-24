@@ -9,9 +9,6 @@ app.controller('HomeCtrl', ['$scope', function($scope) {
     }
   };
 
-
-
-
   $scope.map = {
     center: {
         latitude: 45,
@@ -25,5 +22,15 @@ app.controller('HomeCtrl', ['$scope', function($scope) {
 	$scope.toggleMenu = function(){
 		$scope.showmenu=($scope.showmenu) ? false : true;
 	}
+
+}]);
+
+app.controller('PublicationCtrl', ['Publication', '$scope', '$timeout', function(Publication, $scope, $timeout){
+  $scope.publicaciones = Publication.query();
+  $scope.ready = false;
+
+  $timeout(function(){
+    $scope.ready = true;
+  },600);
 
 }]);
