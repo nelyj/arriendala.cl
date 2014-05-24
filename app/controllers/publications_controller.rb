@@ -30,7 +30,7 @@ class PublicationsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @publication }
+      format.json { render json: publicacione_path(@publication) }
     end
   end
 
@@ -46,8 +46,8 @@ class PublicationsController < ApplicationController
 
     respond_to do |format|
       if @publication.save
-        format.html { redirect_to @publication, notice: 'Publication was successfully created.' }
-        format.json { render json: @publication, status: :created, location: @publication }
+        format.html { redirect_to publicacione_path(@publication), notice: 'Publication was successfully created.' }
+        format.json { render json: publicacione_path(@publication), status: :created, location: publicacione_path(@publication) }
       else
         format.html { render action: "new" }
         format.json { render json: @publication.errors, status: :unprocessable_entity }

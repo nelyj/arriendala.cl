@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.15'
+gem 'rails', '3.2.16'
 
 group :development, :test do
 	gem 'sqlite3'
 end
 
 group :production do
-	gem 'pg'
+	gem 'mysql2'
 end
 
 group :assets do
