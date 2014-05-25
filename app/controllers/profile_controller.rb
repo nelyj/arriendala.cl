@@ -1,5 +1,10 @@
 class ProfileController < ApplicationController
   def show
+    @person = current_user.person
+
+    respond_to do |format|
+      format.json { render json: @person }
+    end
   end
 
   def new
