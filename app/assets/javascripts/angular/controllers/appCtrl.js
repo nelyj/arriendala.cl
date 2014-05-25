@@ -22,5 +22,4 @@ app.controller('PublicationCtrl', ['Publication', '$scope', '$timeout', function
     $scope.mapReady = false;
   },1500);
 
-
 }]);
