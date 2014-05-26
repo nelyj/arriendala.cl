@@ -1,5 +1,5 @@
 class ProfileController < ApplicationController
-  def show
+  def index
     @person = current_user.person
 
     respond_to do |format|
