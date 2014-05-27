@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.16'
 
+group :development do
+	gem 'better_errors'
+end
+
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'

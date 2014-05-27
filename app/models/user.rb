@@ -7,12 +7,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :person_attributes
 
   has_many :publications
   has_one :person
 
   accepts_nested_attributes_for :person
+  validates_associated :person
 
   private
   

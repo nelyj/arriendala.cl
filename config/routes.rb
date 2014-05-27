@@ -1,7 +1,7 @@
 SquapeCom::Application.routes.draw do
 
   resources :publicaciones, :controller => "publications"
-  resources :perfil, :controller=> "profile", except: [:destroy, :show]
+  resources :perfil, :controller=> "profile"
   devise_for :users
 
   devise_scope :user do

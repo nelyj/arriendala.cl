@@ -5,5 +5,7 @@ class Person < ActiveRecord::Base
   geocoded_by :address
   after_validation :geocode
   
+  validates :name, presence: true
+
   belongs_to :user
 end
