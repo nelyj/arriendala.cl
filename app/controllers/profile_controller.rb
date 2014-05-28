@@ -18,7 +18,7 @@ class ProfileController < ApplicationController
       if @person.save
         format.html { redirect_to root_path }
       else
-        format.html { render action: "informacion" }
+        format.html { render action: "new" }
       end
     end
   end
@@ -29,6 +29,6 @@ class ProfileController < ApplicationController
 
   def informacion
   	@user = current_user
-  	@user.build_person
+  	@user.build_person if @user.person.nil?
   end
 end

@@ -13,11 +13,13 @@ app = angular.module('squapeApp', ['ngAnimate' , 'ngRoute', 'ngResource','Public
 
 app.config(['$routeProvider','$locationProvider', 
 	function($routeProvider,$locationProvider){
-
 		$routeProvider.
 		when('/publicaciones',{
 			templateUrl: '../assets/index.html',
 			controller: 'PublicationCtrl'
+		}).
+		when('/informacion/perfil',{
+			templateUrl: '../assets/crear_perfil.html'
 		}).
 		otherwise({
 			redirectTo: '/publicaciones'
