@@ -23,3 +23,4 @@ app.controller('PublicationCtrl', ['Publication', '$scope', '$timeout', function
   },1500);
 
 }]);
+
