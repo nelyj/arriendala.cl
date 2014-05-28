@@ -9,7 +9,7 @@
 //= require underscore-min
 //= require angular-google-maps.min
 
-app = angular.module('squapeApp', ['ngAnimate' , 'ngRoute', 'ngResource','PublicationService','appCtrl', 'google-maps', 'ngTouch']);
+app = angular.module('squapeApp', ['ngAnimate' , 'ngRoute', 'ngResource','PublicationService','PersonService','appCtrl', 'google-maps', 'ngTouch']);
 
 app.config(['$routeProvider','$locationProvider', 
 	function($routeProvider,$locationProvider){

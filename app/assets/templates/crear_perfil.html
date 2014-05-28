@@ -9,27 +9,27 @@
 				Paso 1
 				<strong>Crear un perfil</strong>
 			</h2>
-			<p>
+			<p class="profile">
 				Necesitamos parte de tu información para poder ayudarte a encontrar las mejores alternativas 
 			</p>
-
-
-			<form name="ProfileForm">
+			{{person}}
+			{{profileForm.$valid}}
+			<form name="profileForm" ng-submit="profileForm.$valid && submitForm()" novalidate>
 				<fieldset>
 					<ul>
 						<li class="field">
 								<label class="inline" for="nombre">Escribe tu nombre</label>
-								<input class="xwide text input" type="text" placeholder="Nelson Patricio" id="nombre" />
+								<input class="xwide text input" type="text" placeholder="Nelson Patricio" id="nombre" ng-model="person.name" required/>
 						</li>
 						<li class="field">
 								<label class="inline" for="apellido">Escribe tu apellido</label>
-								<input class="xwide text input" type="text" placeholder="Jiménez Troncoso" id="apellido" />
+								<input class="xwide text input" type="text" placeholder="Jiménez Troncoso" id="apellido" ng-model="person.last_name" required />
 						</li>
 						</li>
 						<li class="field">
 							<div class="picker wide label-margin-right" id="sexo" >
 								
-								<select>
+								<select ng-model="person.gender" required>
 									<option value="#" disabled>Cual es tu sexo</option>
 									<option>Hombre</option>
 									<option>Mujer</option>
@@ -37,7 +37,7 @@
 							</div>
 
 							<div class="picker wide">
-								<select id="sexo">
+								<select id="married" ng-model="person.married" required>
 									<option value="#" disabled>Estas casado?</option>
 									<option value="true">Si</option>
 									<option value="false">No</option>
@@ -46,17 +46,17 @@
 						</li>
 						<li class="field">
 							<label class="inline custom-margin-trabajas" for="trabajas">Donde trabajas ?</label>
-							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="trabajas"/>
+							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="trabajas" ng-model="person.location_work" required/>
 						</li>
 						<li class="field">
 							<label class="inline custom-margin-vives" for="vives">Donde vives ?</label>
-							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="vives"/>
+							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="vives" ng-model="person.location" required/>
 						</li>
 					</ul>	
 				</fieldset>
 
-				<div class="large primary btn">
-					<input type="submit" name="" value="Guardar">
+				<div class="large primary btn" ng-class="{'own-button-hide' : profileForm.$invalid, 'own-button-show': profileForm.$valid}">
+					<input type="submit" name="" value="Guardar" ng-disabled="profileForm.$invalid">
 				</div>
 			</form>
 		</div>

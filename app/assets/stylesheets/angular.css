@@ -54,3 +54,41 @@
 .angular-google-map-container img {
     max-width: none;
 }
+
+
+.e-profile.ng-enter{
+    -webkit-animation: fadeInLeft 1s;
+    animation: fadeInLeft 1s;
+    display: block !important;
+}
+
+.input.ng-invalid.ng-dirty{
+  border-color:#FA787E;
+    -webkit-animation: shake 1s;
+    animation: shake 1s;
+}
+
+.input.ng-valid.ng-dirty{
+  border-color: #78FA89;
+}
+
+input[disabled=disabled], button:disabled {
+  display: none;
+}
+
+.own-button-hide{
+  
+  border-color:#FA787E;
+  -webkit-animation: fadeOutLeft 1s;
+  animation: fadeOutLeft 1s;
+  display: none;
+}
+
+.own-button-show{
+  border-color:#FA787E;
+  -webkit-animation: fadeInLeft 1s;
+  animation: fadeInLeft 1s;
+  display: inline-block;
+}
+
+

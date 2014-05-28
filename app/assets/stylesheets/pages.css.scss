@@ -225,3 +225,15 @@ nav{
 .label-margin-right{
 	margin-right: 7% !important;
 }
+
+p{
+	&.profile{
+		font-weight: 100;
+	}
+}
+
+label{
+	&.inline{
+		font-weight: 100;
+	}
+}

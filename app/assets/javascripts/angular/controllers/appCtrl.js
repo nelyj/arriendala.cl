@@ -24,7 +24,13 @@ app.controller('PublicationCtrl', ['Publication', '$scope', '$timeout', function
 
 }]);
 
-app.controller('ProfileCtrl', ['$scope', function($scope){
-  $scope.clase = "test";
+app.controller('ProfileCtrl', ['Person','$scope','$http', function(Person, $scope, $http){
+  $scope.angularClass = "e-profile";
+  $scope.person = new Person();
+
+  $scope.submitForm = function(){
+   
+  };
+
 }]);
 
