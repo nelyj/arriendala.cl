@@ -19,7 +19,8 @@ app.config(['$routeProvider','$locationProvider',
 			controller: 'PublicationCtrl'
 		}).
 		when('/informacion/perfil',{
-			templateUrl: '../assets/crear_perfil.html'
+			templateUrl: '../assets/crear_perfil.html',
+			controller: 'ProfileCtrl'
 		}).
 		otherwise({
 			redirectTo: '/publicaciones'

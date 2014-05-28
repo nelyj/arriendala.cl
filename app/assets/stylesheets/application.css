@@ -10,5 +10,7 @@
  *
  *= require_self
  *= require gumby
- *= require_tree .
+ *= require pages
+ *= require animate
+ *= require angular
  */

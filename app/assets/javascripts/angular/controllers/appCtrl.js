@@ -24,3 +24,7 @@ app.controller('PublicationCtrl', ['Publication', '$scope', '$timeout', function
 
 }]);
 
+app.controller('ProfileCtrl', ['$scope', function($scope){
+  $scope.clase = "test";
+}]);
+
