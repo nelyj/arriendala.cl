@@ -1,46 +1,64 @@
 <div class="row">
 	<div class="twelve columns">
-	<h2>
-		Paso 1
-		<strong>Crear un perfil</strong>
-	</h2>
-	<p>
-		Necesitamos parte de tu información para poder ayudarte a encontrar las mejores alternativas 
-	</p>
 
-	<form name="ProfileForm">
-		<fieldset>
-			<legend>Datos personales</legend>
+	<div class="row">
+		<div class="two columns"></div>
+		<div class="eight columns">
+			
+			<h2>
+				Paso 1
+				<strong>Crear un perfil</strong>
+			</h2>
+			<p>
+				Necesitamos parte de tu información para poder ayudarte a encontrar las mejores alternativas 
+			</p>
 
 
-			<div class="row">
-				<div class="twelve columns">
-					<div class="row">
+			<form name="ProfileForm">
+				<fieldset>
+					<ul>
+						<li class="field">
+								<label class="inline" for="nombre">Escribe tu nombre</label>
+								<input class="xwide text input" type="text" placeholder="Nelson Patricio" id="nombre" />
+						</li>
+						<li class="field">
+								<label class="inline" for="apellido">Escribe tu apellido</label>
+								<input class="xwide text input" type="text" placeholder="Jiménez Troncoso" id="apellido" />
+						</li>
+						</li>
+						<li class="field">
+							<div class="picker wide label-margin-right" id="sexo" >
+								
+								<select>
+									<option value="#" disabled>Cual es tu sexo</option>
+									<option>Hombre</option>
+									<option>Mujer</option>
+								</select>
+							</div>
 
-						<div class="six columns">
-							<ul>
-								<li class="field">
-									<input type="text">
-								</li>
-								</li>
-								<li class="field"></li>
-								<li class="field"></li>
-							</ul>	
-						</div>
+							<div class="picker wide">
+								<select id="sexo">
+									<option value="#" disabled>Estas casado?</option>
+									<option value="true">Si</option>
+									<option value="false">No</option>
+								</select>
+							</div>
+						</li>
+						<li class="field">
+							<label class="inline custom-margin-trabajas" for="trabajas">Donde trabajas ?</label>
+							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="trabajas"/>
+						</li>
+						<li class="field">
+							<label class="inline custom-margin-vives" for="vives">Donde vives ?</label>
+							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="vives"/>
+						</li>
+					</ul>	
+				</fieldset>
 
-						<div class="six columns">
-							<ul>
-								<li class="field"></li>
-								<li class="field"></li>
-								<li class="field"></li>
-							</ul>
-						</div>
-
-					</div>
+				<div class="large primary btn">
+					<input type="submit" name="" value="Guardar">
 				</div>
-			</div>
-
-		</fieldset>
-	</form>
+			</form>
+		</div>
 	</div>
 </div>
