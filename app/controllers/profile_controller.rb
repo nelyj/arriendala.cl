@@ -2,17 +2,16 @@ class ProfileController < ApplicationController
   respond_to :json  
 
   def index
-    @person = current_user.person
+    @person = current_user
     respond_with @person
-  end
-
-  def new
-  	@person = Person.new
   end
 
   def create
   	@person = current_user.build_person(params[:person])
-    respond_with @person, location: root_path
+
+    if @person.save
+      render :json => "hi #{params[:name]} #{params[:person]}"
+    end
   end
 
   def update

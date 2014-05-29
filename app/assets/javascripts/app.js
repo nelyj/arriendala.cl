@@ -11,8 +11,11 @@
 
 app = angular.module('squapeApp', ['ngAnimate' , 'ngRoute', 'ngResource','PublicationService','PersonService','appCtrl', 'google-maps', 'ngTouch']);
 
-app.config(['$routeProvider','$locationProvider', 
-	function($routeProvider,$locationProvider){
+app.config(['$routeProvider','$locationProvider', '$httpProvider', 
+	function($routeProvider,$locationProvider, $httpProvider){
+
+		$httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+
 		$routeProvider.
 		when('/publicaciones',{
 			templateUrl: '../assets/index.html',

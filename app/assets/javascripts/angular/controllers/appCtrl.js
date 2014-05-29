@@ -16,20 +16,29 @@ app.controller('PublicationCtrl', ['Publication', '$scope', '$timeout', function
 
   $timeout(function(){
     $scope.ready = true;
-  },600);
+  },2000);
 
   $timeout(function(){
     $scope.mapReady = false;
-  },1500);
+  },2000);
 
 }]);
 
-app.controller('ProfileCtrl', ['Person','$scope','$http', function(Person, $scope, $http){
+app.controller('ProfileCtrl', ['Person','$scope','$http','$location', function(Person, $scope, $http, $location){
   $scope.angularClass = "e-profile";
-  $scope.person = new Person();
+  $scope.newPerson = [];
+  $scope.persona = Person.query();
 
   $scope.submitForm = function(){
-   
+    if ($scope.profileForm.$valid) {
+      console.log($scope.newPerson);
+      $scope.newPerson = Person.save($scope.newPerson);
+      console.log($scope.newPerson);
+      console.log("waiting for save");
+      console.log($scope.newPerson);
+      console.log("save it");
+      $location.path('/publicaciones');
+    }
   };
 
 }]);

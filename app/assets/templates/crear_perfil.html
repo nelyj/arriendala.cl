@@ -1,3 +1,4 @@
+{{persona}}
 <div class="row">
 	<div class="twelve columns">
 
@@ -12,24 +13,23 @@
 			<p class="profile">
 				Necesitamos parte de tu información para poder ayudarte a encontrar las mejores alternativas 
 			</p>
-			{{person}}
-			{{profileForm.$valid}}
+			
 			<form name="profileForm" ng-submit="profileForm.$valid && submitForm()" novalidate>
 				<fieldset>
 					<ul>
 						<li class="field">
 								<label class="inline" for="nombre">Escribe tu nombre</label>
-								<input class="xwide text input" type="text" placeholder="Nelson Patricio" id="nombre" ng-model="person.name" required/>
+								<input class="xwide text input" type="text" placeholder="Nelson Patricio" id="nombre" ng-model="newPerson.name" required/>
 						</li>
 						<li class="field">
 								<label class="inline" for="apellido">Escribe tu apellido</label>
-								<input class="xwide text input" type="text" placeholder="Jiménez Troncoso" id="apellido" ng-model="person.last_name" required />
+								<input class="xwide text input" type="text" placeholder="Jiménez Troncoso" id="apellido" ng-model="newPerson.last_name" required />
 						</li>
 						</li>
 						<li class="field">
 							<div class="picker wide label-margin-right" id="sexo" >
 								
-								<select ng-model="person.gender" required>
+								<select ng-model="newPerson.gender">
 									<option value="#" disabled>Cual es tu sexo</option>
 									<option>Hombre</option>
 									<option>Mujer</option>
@@ -37,7 +37,7 @@
 							</div>
 
 							<div class="picker wide">
-								<select id="married" ng-model="person.married" required>
+								<select id="married" ng-model="newPerson.married" >
 									<option value="#" disabled>Estas casado?</option>
 									<option value="true">Si</option>
 									<option value="false">No</option>
@@ -46,11 +46,11 @@
 						</li>
 						<li class="field">
 							<label class="inline custom-margin-trabajas" for="trabajas">Donde trabajas ?</label>
-							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="trabajas" ng-model="person.location_work" required/>
+							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="trabajas" ng-model="newPerson.location_work" />
 						</li>
 						<li class="field">
 							<label class="inline custom-margin-vives" for="vives">Donde vives ?</label>
-							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="vives" ng-model="person.location" required/>
+							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="vives" ng-model="newPerson.location" />
 						</li>
 					</ul>	
 				</fieldset>

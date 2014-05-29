@@ -62,6 +62,13 @@
     display: block !important;
 }
 
+
+.e-profile.ng-leave{
+    -webkit-animation: fadeOutLeft 1s;
+    animation: fadeOutLeft 1s;
+    display: block !important;
+}
+
 .input.ng-invalid.ng-dirty{
   border-color:#FA787E;
     -webkit-animation: shake 1s;

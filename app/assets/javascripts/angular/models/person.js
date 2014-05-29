@@ -7,6 +7,9 @@ person.factory('Person', ['$resource', function($resource){
 	{id: '@id'}, {
 		update: {
 			method: 'PUT'
+		},
+		query:{
+			isArray: false
 		}
 	});
 
