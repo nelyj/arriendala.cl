@@ -98,4 +98,10 @@ input[disabled=disabled], button:disabled {
   display: inline-block;
 }
 
+.mapa{
+  display: none;
+}
 
+.mapa.show{
+  display: block;
+}

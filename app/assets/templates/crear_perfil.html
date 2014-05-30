@@ -1,4 +1,3 @@
-{{persona}}
 <div class="row">
 	<div class="twelve columns">
 
@@ -29,7 +28,7 @@
 						<li class="field">
 							<div class="picker wide label-margin-right" id="sexo" >
 								
-								<select ng-model="newPerson.gender">
+								<select ng-model="newPerson.gender" required>
 									<option value="#" disabled>Cual es tu sexo</option>
 									<option>Hombre</option>
 									<option>Mujer</option>
@@ -37,7 +36,7 @@
 							</div>
 
 							<div class="picker wide">
-								<select id="married" ng-model="newPerson.married" >
+								<select id="married" ng-model="newPerson.married" required>
 									<option value="#" disabled>Estas casado?</option>
 									<option value="true">Si</option>
 									<option value="false">No</option>
@@ -46,11 +45,11 @@
 						</li>
 						<li class="field">
 							<label class="inline custom-margin-trabajas" for="trabajas">Donde trabajas ?</label>
-							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="trabajas" ng-model="newPerson.location_work" />
+							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="trabajas" ng-model="newPerson.location_work" required/>
 						</li>
 						<li class="field">
 							<label class="inline custom-margin-vives" for="vives">Donde vives ?</label>
-							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="vives" ng-model="newPerson.location" />
+							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="vives" ng-model="newPerson.location" required/>
 						</li>
 					</ul>	
 				</fieldset>

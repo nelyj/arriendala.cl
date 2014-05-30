@@ -4,7 +4,8 @@ var app = angular.module("appCtrl", []);
 app.controller('PublicationCtrl', ['Publication', '$scope', '$timeout', function(Publication, $scope, $timeout){
   $scope.publicaciones = Publication.query();
   $scope.ready = false;
-  $scope.mapReady = true;
+  $scope.mapReady = false;
+  $scope.angularClass = "e-profile";
 
   $scope.map = {
     center: {
@@ -16,11 +17,13 @@ app.controller('PublicationCtrl', ['Publication', '$scope', '$timeout', function
 
   $timeout(function(){
     $scope.ready = true;
-  },2000);
 
-  $timeout(function(){
-    $scope.mapReady = false;
-  },2000);
+    $timeout(function(){
+      $scope.mapReady = true;
+    }, 1300);
+
+  },1200);
+
 
 }]);
 
