@@ -1,8 +1,9 @@
 var app = angular.module("appCtrl", []);
 
 
-app.controller('PublicationCtrl', ['Publication', '$scope', '$timeout', function(Publication, $scope, $timeout){
+app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout', function(Publication, Person,$scope, $timeout){
   $scope.publicaciones = Publication.query();
+  $scope.current_user = Person.query();
   $scope.ready = false;
   $scope.mapReady = false;
   $scope.angularClass = "e-profile";
