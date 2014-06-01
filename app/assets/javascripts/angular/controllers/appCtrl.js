@@ -34,8 +34,8 @@ app.controller('ProfileCtrl', ['Person','$scope','$http','$location', function(P
   $scope.newPerson = { person: {
     name: null,
     last_name: null,
-    address: null,
-    address_work: null
+    start_address: null,
+    end_address: null
   } };
 
   $scope.persona = Person.query();
