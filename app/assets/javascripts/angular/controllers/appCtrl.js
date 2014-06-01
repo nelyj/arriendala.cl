@@ -31,7 +31,13 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
 
 app.controller('ProfileCtrl', ['Person','$scope','$http','$location', function(Person, $scope, $http, $location){
   $scope.angularClass = "e-profile";
-  $scope.newPerson = [];
+  $scope.newPerson = { person: {
+    name: null,
+    last_name: null,
+    address: null,
+    address_work: null
+  } };
+
   $scope.persona = Person.query();
 
   $scope.submitForm = function(){
