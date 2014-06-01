@@ -21,7 +21,7 @@ app.controller('PublicationCtrl', ['Publication', '$scope', '$timeout', function
     $timeout(function(){
       $scope.mapReady = true;
       $scope.map.control.refresh({latitude: 32.779680, longitude: -79.935493});
-    }, 1300);
+    }, 800);
 
   },1200);
 
