@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140525025838) do
+ActiveRecord::Schema.define(:version => 20140601063410) do
 
   create_table "people", :force => true do |t|
     t.string   "name"
@@ -30,6 +30,9 @@ ActiveRecord::Schema.define(:version => 20140525025838) do
     t.string   "address"
     t.float    "longitude"
     t.float    "latitude"
+    t.string   "address_work"
+    t.float    "longitude_work"
+    t.float    "latitude_work"
   end
 
   add_index "people", ["user_id"], :name => "index_people_on_user_id"
