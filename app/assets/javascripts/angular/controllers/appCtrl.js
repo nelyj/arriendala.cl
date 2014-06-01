@@ -36,12 +36,7 @@ app.controller('ProfileCtrl', ['Person','$scope','$http','$location', function(P
 
   $scope.submitForm = function(){
     if ($scope.profileForm.$valid) {
-      console.log($scope.newPerson);
       $scope.newPerson = Person.save($scope.newPerson);
-      console.log($scope.newPerson);
-      console.log("waiting for save");
-      console.log($scope.newPerson);
-      console.log("save it");
       $location.path('/publicaciones');
     }
   };
