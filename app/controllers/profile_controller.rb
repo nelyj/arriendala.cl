@@ -3,7 +3,7 @@ class ProfileController < ApplicationController
   respond_to :json  
 
   def index
-    @person = current_user
+    @person = current_user.person
     respond_with @person
   end
 

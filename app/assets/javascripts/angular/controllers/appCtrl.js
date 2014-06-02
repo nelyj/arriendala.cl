@@ -1,27 +1,30 @@
 var app = angular.module("appCtrl", []);
 
-
-app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout', function(Publication, Person,$scope, $timeout){
+app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout', function(Publication, Person, $scope, $timeout){
   $scope.publicaciones = Publication.query();
-  $scope.current_user = Person.query();
-  $scope.ready = false;
-  $scope.mapReady = false;
-  $scope.angularClass = "e-profile";
 
   $scope.map = {
     center: {
-        latitude: 45,
-        longitude: -73
+        latitude: null,
+        longitude: null
     },
-    zoom: 10
+    zoom: 16
   };
+
+  $scope.person = Person.query(function(data){
+    $scope.map.center.latitude = data.start_latitude;
+    $scope.map.center.longitude = data.start_longitude;
+  });
+
+  $scope.ready = false;
+  $scope.mapReady = false;
+  $scope.angularClass = "e-profile";
 
   $timeout(function(){
     $scope.ready = true;
 
     $timeout(function(){
       $scope.mapReady = true;
-      $scope.map.control.refresh({latitude: 32.779680, longitude: -79.935493});
     }, 800);
 
   },1200);
