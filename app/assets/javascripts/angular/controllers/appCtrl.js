@@ -11,9 +11,16 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
     zoom: 16
   };
 
+
+
   $scope.person = Person.query(function(data){
     $scope.map.center.latitude = data.start_latitude;
     $scope.map.center.longitude = data.start_longitude;
+
+    $scope.marker = {
+      latitude: data.start_latitude,
+      longitude: data.start_longitude
+    };
   });
 
   $scope.ready = false;
