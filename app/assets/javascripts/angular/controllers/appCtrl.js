@@ -8,7 +8,10 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
         latitude: null,
         longitude: null
     },
-    zoom: 16
+    options:{
+      animation: google.maps.Animation.BOUNCE
+    },
+    zoom: 14
   };
 
 
