@@ -5,7 +5,6 @@
 //= require angular-touch
 //= require_tree ./angular/models
 //= require_tree ./angular/controllers
-//= require_tree ./angular/directives
 //= require underscore-min
 //= require angular-google-maps.min
 
