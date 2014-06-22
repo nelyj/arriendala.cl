@@ -5,8 +5,8 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
 
   $scope.map = {
     center: {
-        latitude: null,
-        longitude: null
+        latitude: -33.4262800,
+        longitude: -70.5665600
     },
     options:{
       animation: google.maps.Animation.BOUNCE
@@ -15,11 +15,15 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
   };
 
 
-
   $scope.person = Person.query(function(data){
-    $scope.map.center.latitude = data.start_latitude;
-    $scope.map.center.longitude = data.start_longitude;
+    if(!!data.start_latitude){
+      $scope.map.center.latitude = data.start_latitude;
+    }
 
+    if(!!data.start_longitude){
+      $scope.map.center.longitude = data.start_longitude;
+    }
+    
     $scope.marker = {
       latitude: data.start_latitude,
       longitude: data.start_longitude
