@@ -1,0 +1,25 @@
+.row
+  .centered.five.columns
+    %h2 Inicia sesión
+
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      %fieldset
+        %legend Datos de sesión
+        .row
+          .centered.twelve.columns
+            - flash.each do |type, message|
+              %div{:class => "#{flash_class type} alert"}
+                =message 
+        %br
+        .row
+          .centered.twelve.columns
+            %ul
+              %li.field
+                = f.input :email, required: true, autofocus: true, label: false, placeholder: 'Correo Electrónico'
+              %li.field
+                = f.input :password, required: true, label: false, placeholder: 'Contraseña'
+            
+              = f.input :remember_me, label: 'Recordar contraseña', as: :boolean if devise_mapping.rememberable?
+        .medium.primary.btn
+          = f.button :submit, "Ingresar"
+    = render "devise/shared/links"
