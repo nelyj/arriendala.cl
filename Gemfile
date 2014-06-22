@@ -35,3 +35,4 @@ gem 'rolify'
 gem 'simple_form'
 gem 'country_select'
 gem 'geocoder'
+

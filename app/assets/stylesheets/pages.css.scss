@@ -133,21 +133,30 @@ section{
 		}
 	}
 
-
 	&.title{
 		height: 450px; 
+		background: url('/assets/optmized_place_two.png') no-repeat center center fixed;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-		background: url('/assets/place_two.png') no-repeat center center fixed;
+		
 		border-bottom:0.5em solid #F7961D;
 		&.feature{
-			background: url('/assets/vina_del_mar.png') no-repeat center center fixed;
+			width: 100%;
+			background: url('/assets/vina_del_mar_optimized.png') no-repeat center center fixed;
+			-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
 		}
 
 		&.login{
-			background: url('/assets/torre_entel.png') no-repeat center center fixed;
+			background: url('/assets/torre_entel_optimized.png') no-repeat center center fixed;
+			-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	  	-o-background-size: cover;
+	  	background-size: cover;
 		}
 	}
 }

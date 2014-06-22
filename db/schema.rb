@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140601074333) do
+ActiveRecord::Schema.define(:version => 20140615123827) do
+
+  create_table "enterprises", :force => true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
+  end
+
+  add_index "enterprises", ["user_id"], :name => "index_enterprises_on_user_id"
 
   create_table "people", :force => true do |t|
     t.string   "name"
@@ -33,6 +46,14 @@ ActiveRecord::Schema.define(:version => 20140601074333) do
   end
 
   add_index "people", ["user_id"], :name => "index_people_on_user_id"
+
+  create_table "plans", :force => true do |t|
+    t.string   "name"
+    t.text     "features"
+    t.float    "price"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "publications", :force => true do |t|
     t.string   "title"
@@ -75,6 +96,19 @@ ActiveRecord::Schema.define(:version => 20140601074333) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "users_plans", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "plan_id"
+    t.boolean  "activo"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "users_plans", ["plan_id"], :name => "index_users_plans_on_plan_id"
+  add_index "users_plans", ["user_id"], :name => "index_users_plans_on_user_id"
 
   create_table "users_roles", :id => false, :force => true do |t|
     t.integer "user_id"
