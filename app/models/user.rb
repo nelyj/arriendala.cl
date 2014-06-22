@@ -3,11 +3,11 @@ class User < ActiveRecord::Base
   after_create :assign_default_role
 
   # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  # :confirmable, :lockable, :timeoutable and 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :person_attributes
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :person_attributes, :uid, :provider
 
   has_many :publications
   has_one :person
