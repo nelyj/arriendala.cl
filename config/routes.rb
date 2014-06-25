@@ -2,7 +2,8 @@ SquapeCom::Application.routes.draw do
 
   resources :publicaciones, :controller => "publications"
   resources :perfil, :controller=> "profile"
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
 
   devise_scope :user do
     get 'auth/registrar', to: 'devise/registrations#new', as: :registrar

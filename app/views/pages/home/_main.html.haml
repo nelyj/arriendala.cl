@@ -13,7 +13,7 @@
 				%strong él te encontrará a ti
 
 		.centered.nine.columns
-			=link_to "#" do
+			=link_to user_omniauth_authorize_path(:facebook) do
 				=image_tag "facebook.png"
 			=link_to registrar_path, class: 'right' do
 				=image_tag "correo.png"
