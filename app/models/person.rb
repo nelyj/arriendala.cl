@@ -15,13 +15,23 @@ class Person < ActiveRecord::Base
 
   def geo_by_start_address
   	coords = Geocoder.coordinates(self.start_address)
-  	self.start_latitude = coords[0]
-  	self.start_longitude = coords[1]
+    if coords.nil?
+      self.start_latitude = nil
+      self.start_longitude = nil
+    else
+     self.start_latitude = coords[0]
+  	 self.start_longitude = coords[1]
+    end
   end
 
   def geo_by_end_address
   	coords = Geocoder.coordinates(self.end_address)
-  	self.end_latitude = coords[0]
-  	self.end_longitude = coords[1]
+    if coords.nil?
+      self.end_latitude = nil
+      self.end_longitude = nil
+    else
+     self.end_latitude = coords[0]
+     self.end_longitude = coords[1]
+    end
   end
 end
