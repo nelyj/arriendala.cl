@@ -255,3 +255,19 @@ label{
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
 }
+
+.radioLeft{
+	display: block;
+	float: left;
+	width: 100%;
+	b{
+			float: left;
+			margin-right: 20px;
+			font-weight: 700;
+	}
+}
+
+.radioButton{
+	float: left;
+	margin-right: 40px;
+}
