@@ -28,11 +28,11 @@
 					<div class="radioLeft">
 						<b>Modalidad</b>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="venta">
+							<input type="radio" name="modalidadPropiedad" value="venta" ng-model="publicacion.modalidad">
 							Venta
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="arriendo">
+							<input type="radio" name="modalidadPropiedad" value="arriendo" ng-model="publicacion.modalidad">
 							Arriendo
 						</div>
 					</div>
@@ -40,11 +40,11 @@
 					<div class="radioLeft">
 						<b>Tipo de arriendo</b>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="mensual">
+							<input type="radio" name="modalidadPropiedad" value="mensual" ng-model="publicacion.tipo_arriendo">
 							Mensual
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="diario">
+							<input type="radio" name="modalidadPropiedad" value="diario" ng-model="publicacion.tipo_arriendo">
 							Diario
 						</div>
 					</div>	
@@ -52,11 +52,11 @@
 					<div class="radioLeft">
 						<b>Amoblado</b> 
 						<div class="radioButton">
-							<input type="radio" name="amobladoPropiedad" value="si">
+							<input type="radio" name="amobladoPropiedad" value="true" ng-model="publicacion.amoblado">
 							Si
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="amobladoPropiedad" value="no">
+							<input type="radio" name="amobladoPropiedad" value="false" ng-model="publicacion.amoblado">>
 							No
 						</div>
 					</div>
@@ -64,11 +64,11 @@
 					<div class="radioLeft">
 						<b>Antiguedad</b>
 						<div class="radioButton">
-							<input type="radio" name="nuevaPropiedad" value="nueva">
+							<input type="radio" name="nuevaPropiedad" value="nueva" ng-model="publicacion.antiguedad">
 							Nueva
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="usadaPropiedad" value="usada">
+							<input type="radio" name="usadaPropiedad" value="usada" ng-model="publicacion.antiguedad">
 							Usada
 						</div>			 
 					</div>
