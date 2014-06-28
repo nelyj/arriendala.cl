@@ -50,6 +50,11 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
 
 }]);
 
+app.controller('CrearPublicacionCtrl', ['Publication','$scope', function(Publication, $scope){
+  $scope.angularClass = "e-profile";
+}]);
+
+
 app.controller('ProfileCtrl', ['Person','$scope','$http','$location', function(Person, $scope, $http, $location){
   $scope.angularClass = "e-profile";
   $scope.newPerson = { person: {
@@ -58,7 +63,7 @@ app.controller('ProfileCtrl', ['Person','$scope','$http','$location', function(P
     start_address: null,
     end_address: null,
     image_url: null,
-    relationship_status: "asd",
+    relationship_status: null,
     gender: null
   } };
 

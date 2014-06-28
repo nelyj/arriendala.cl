@@ -12,7 +12,7 @@
 				-if user_signed_in?
 					%li
 						.medium.primary.btn
-							=link_to "Publicar", "#"
+							=link_to "Publicar", "/publicacion/nuevo"
 					%li=link_to "Perfil", "/informacion/perfil"
 					%li=link_to "Salir", destroy_user_session_path, :method => :delete
 				-else
