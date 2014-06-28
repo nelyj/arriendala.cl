@@ -10,7 +10,7 @@
 		%nav.seven.columns.pull_right
 			%ul#main-nave.right
 				-if user_signed_in?
-					%li=link_to "Perfil", edit_user_registration_path
+					%li=link_to "Perfil", "/informacion/perfil"
 					%li=link_to "Salir", destroy_user_session_path, :method => :delete
 				-else
 					%li

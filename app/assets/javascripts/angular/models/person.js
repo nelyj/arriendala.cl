@@ -6,7 +6,9 @@ person.factory('Person', ['$resource', function($resource){
 	'http://squape.dev/perfil/:id.json', 
 	{id: '@id'}, {
 		update: {
-			method: 'PUT'
+			method: 'PUT',
+			cache : false
+
 		},
 		query:{
 			isArray: false

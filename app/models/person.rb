@@ -1,7 +1,7 @@
 class Person < ActiveRecord::Base
   attr_accessible :name, :last_name, :gender, :married,:birthday_day, :birthday_month, :birthday_year,
   :start_address, :start_latitude, :start_longitude,
-  :end_address, :end_latitude, :end_longitude
+  :end_address, :end_latitude, :end_longitude,:created_at, :id, :updated_at, :user_id, :image_url,:relationship_status
 
   geocoded_by :start_address, latitude: :start_latitude, longitude: :start_longitude
 	geocoded_by :end_address, latitude: :end_latitude, longitude: :end_longitude

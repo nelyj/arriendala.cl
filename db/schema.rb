@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140622232346) do
+ActiveRecord::Schema.define(:version => 20140627235919) do
 
   create_table "enterprises", :force => true do |t|
     t.string   "name"
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(:version => 20140622232346) do
     t.integer  "birthday_day"
     t.integer  "birthday_month"
     t.integer  "birthday_year"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.integer  "user_id"
     t.string   "gender"
     t.boolean  "married"
@@ -43,6 +43,8 @@ ActiveRecord::Schema.define(:version => 20140622232346) do
     t.float    "start_longitude"
     t.float    "end_latitude"
     t.float    "end_longitude"
+    t.string   "image_url"
+    t.string   "relationship_status"
   end
 
   add_index "people", ["user_id"], :name => "index_people_on_user_id"

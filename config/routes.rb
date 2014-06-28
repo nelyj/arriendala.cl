@@ -15,5 +15,6 @@ SquapeCom::Application.routes.draw do
 
   match '/dashboard', :to => 'publications#show', :as => :dashboard
   match '/informacion/perfil', :to => 'profile#informacion', :as => :perfil_informacion
+  match '/about/privacy', :to => 'pages#privacy'
 
 end

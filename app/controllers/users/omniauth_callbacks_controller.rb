@@ -2,7 +2,36 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def facebook
     # You need to implement the method below in your model (e.g. app/models/user.rb)
     @user = User.from_omniauth(request.env["omniauth.auth"])
-    @person = @user.create_person(name: request.env["omniauth.auth"].info.name) if @user.person.nil?
+    @gender = ''
+    if request.env["omniauth.auth"].extra.raw_info.gender == 'male'
+      @gender = "Hombre"
+    elsif request.env["omniauth.auth"].extra.raw_info.gender == 'female'
+      @gender = "Mujer"
+    else
+      @gender = ""
+    end
+      
+
+
+    if @user.person.nil?
+      @person = @user.create_person(
+        name: request.env["omniauth.auth"].info.first_name,
+        last_name: request.env["omniauth.auth"].info.last_name,
+        end_address: request.env["omniauth.auth"].info.location,
+        image_url: request.env["omniauth.auth"].info.image,
+        gender: @gender,
+        relationship_status: request.env["omniauth.auth"].extra.raw_info.relationship_status
+        )
+    else
+      @person =@user.person.update_attributes(
+        name: request.env["omniauth.auth"].info.first_name, 
+        last_name: request.env["omniauth.auth"].info.last_name,
+        end_address: request.env["omniauth.auth"].info.location,
+        image_url: request.env["omniauth.auth"].info.image,
+        gender: @gender,
+        relationship_status: request.env["omniauth.auth"].extra.raw_info.relationship_status
+      )
+    end
 
     if @user.persisted?
       sign_in_and_redirect @user, :event => :authentication #this will throw if @user is not activated

@@ -14,6 +14,9 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
     zoom: 14
   };
 
+  $scope.mapReady = false;
+  $scope.ready = false;
+  $scope.person = [];
 
   $scope.person = Person.query(function(data){
     if(!!data.start_latitude){
@@ -28,6 +31,7 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
       latitude: data.start_latitude,
       longitude: data.start_longitude
     };
+
   });
 
   $scope.ready = false;
@@ -52,10 +56,14 @@ app.controller('ProfileCtrl', ['Person','$scope','$http','$location', function(P
     name: null,
     last_name: null,
     start_address: null,
-    end_address: null
+    end_address: null,
+    image_url: null,
+    relationship_status: "asd",
+    gender: null
   } };
 
   $scope.persona = Person.query();
+  $scope.newPerson.person = Person.query();
 
   $scope.submitForm = function(){
     if ($scope.profileForm.$valid) {

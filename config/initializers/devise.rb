@@ -234,7 +234,7 @@ Devise.setup do |config|
   
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE if Rails.env.development? 
 
-  config.omniauth :facebook, '730270733686330', 'c0b3bede6c555e938bb66388e721e0f6'
+  config.omniauth :facebook, '730270733686330', '161c3c5e90040d2b3eca8b738a5207b5',{ :scope => "publish_stream, email, relationship, gender" }
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
