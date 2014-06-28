@@ -75,18 +75,36 @@
 
 					<div class="radioLeft">
 						<b>N. baños</b> 
+						<select ng-model="publicacion.banios">
+							<option>0</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
 					</div>
 
 					<div class="radioLeft">
 						<b>N. habitaciones</b> 
+						<select ng-model="publicacion.habitaciones">
+							<option>0</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
 					</div>
 
 					<div class="radioLeft">
-						<b>Mts Cuadrados</b> 
+						<b>Mts Cuadrados</b>
+						<input type="text" placeholder="100" ng-model="publicacion.metros_cuadrados"/> 
 					</div>
 
 					<div class="radioLeft">
 						<b>Precio</b> 
+						<input type="text" placeholder="100" ng-model="publicacion.precio" />
 					</div>
 
 
