@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require modernizr
 //= require gumby
+//= require ui/gumby.checkbox
+//= require ui/gumby.radiobtn
 //= require app
