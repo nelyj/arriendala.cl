@@ -4,19 +4,17 @@
 	<div class="row">
 		<div class="two columns"></div>
 		<div class="eight columns">
-			
-			<h2>
-				Paso 1
-				<strong>Crear un perfil</strong>
+			<h2 class="center">
+				<strong>Crea un perfil</strong>
 			</h2>
-			<p class="profile">
-				Necesitamos parte de tu información para poder ayudarte a encontrar las mejores alternativas 
+			<p class="profile center">
+				Necesitamos parte de tu información para poder ayudarte 
 			</p>
 			<p>
 
 			</p>
 			<form name="profileForm" ng-submit="profileForm.$valid && submitForm()" novalidate>
-				<img ng-src="{{ newPerson.person.image_url }}?width=130&height=130" class="centering" alt="">
+				<img ng-src="{{ newPerson.person.image_url }}?width=120&height=120" class="centering" alt="">
 				<fieldset>
 					<ul>
 						<li class="field">
@@ -37,19 +35,8 @@
 									<option>Mujer</option>
 								</select>
 							</div>
+						</li>
 
-							<div class="picker wide">
-								<select id="married" ng-model="newPerson.person.married" required>
-									<option value="#" disabled>Estas casado?</option>
-									<option value="true">Si</option>
-									<option value="false">No</option>
-								</select>
-							</div>
-						</li>
-						<li class="field">
-							<label class="inline custom-margin-trabajas" for="trabajas">Donde trabajas ?</label>
-							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="trabajas" ng-model="newPerson.person.end_address" required/>
-						</li>
 						<li class="field">
 							<label class="inline custom-margin-vives" for="vives">Donde vives ?</label>
 							<input class="xwide text input" type="text" placeholder="Providencia 229, Santiago" id="vives" ng-model="newPerson.person.start_address" required/>

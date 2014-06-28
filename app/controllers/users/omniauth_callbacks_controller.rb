@@ -18,6 +18,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         last_name: request.env["omniauth.auth"].info.last_name,
         image_url: request.env["omniauth.auth"].info.image,
         gender: @gender
+        #start_address: request.env["omniauth.auth"].extra.location.name
+
         )
     else
       @person =@user.person.update_attributes(
@@ -25,6 +27,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         last_name: request.env["omniauth.auth"].info.last_name,
         image_url: request.env["omniauth.auth"].info.image,
         gender: @gender
+        #start_address: request.env["omniauth.auth"].extra.location.name
       )
     end
 
