@@ -1,75 +1,76 @@
 <div class="row">
-	<div class="twelve columns">
+	<div class="two columns"></div>
+	<div class="eight columns">
 		<h2 class="center">
-			Agrega tu propiedad a squape.com
+			Agrega tu propiedad a <strong>squape.com</strong>
 		</h2>
 		<p class="center">
 			Nosotros te ayudamos a ganar dinero con tu propiedad
 		</p>
-		<hr />
+		{{publicacion}}
 		<form name="crearPublicacionForm" ng-submit="crearPublicacionForm.$valid && submiteForm()" novalidate>
 
 			<fieldset>
 				<div class="row">
-				<div class="six columns">
+				<div class="twelve columns">
 
-					<div class="radioLeft buttongroup">
+					<div class="radioLeft">
 						<b>Tipo de propiedad</b> 
 						<div class="radioButton">
-							<input type="radio" name="tipoPropiedad" value="casa" ng-model="publicacion.publication.tipo_propiedad" />
-									Casa
+							<input type="radio" name="tipoPropiedad" value="casa" ng-model="publicacion.publication.tipo_propiedad" id="tipoCasa" />
+									<label for="tipoCasa">Casa</label>
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="tipoPropiedad" value="depto" ng-model="publicacion.tipo_propiedad">
-									Departamento
+							<input type="radio" name="tipoPropiedad" value="depto" ng-model="publicacion.publication.tipo_propiedad" id="tipoDepto">
+									<label for="tipoDepto">Departamento</label>
 						</div>
 					</div>
 
 					<div class="radioLeft">
 						<b>Modalidad</b>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="venta" ng-model="publicacion.publication.modalidad">
-							Venta
+							<input type="radio" name="modalidadPropiedad" value="venta" ng-model="publicacion.publication.modalidad" id="modalidadVenta">
+							<label for="modalidadVenta">Venta</label>
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="arriendo" ng-model="publicacion.publication.modalidad">
-							Arriendo
+							<input type="radio" name="modalidadPropiedad" value="arriendo" ng-model="publicacion.publication.modalidad" id="modalidadArriendo">
+							<label for="modalidadArriendo">Arriendo</label>
 						</div>
 					</div>
 
 					<div class="radioLeft">
 						<b>Tipo de arriendo</b>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="mensual" ng-model="publicacion.publication.tipo_arriendo">
-							Mensual
+							<input type="radio" name="tipoArriendo" value="mensual" ng-model="publicacion.publication.tipo_arriendo" id="arriendoMensual">
+							<label for="arriendoMensual">Mensual</label>
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="diario" ng-model="publicacion.publication.tipo_arriendo">
-							Diario
+							<input type="radio" name="tipoArriendo" value="diario" ng-model="publicacion.publication.tipo_arriendo" id="arriendoDiario">
+							<label for="arriendoDiario">Diario</label>
 						</div>
 					</div>	
 
 					<div class="radioLeft">
 						<b>Amoblado</b> 
 						<div class="radioButton">
-							<input type="radio" name="amobladoPropiedad" value="true" ng-model="publicacion.publication.amoblado">
-							Si
+							<input type="radio" name="amoblados" value="si" ng-model="publicacion.publication.amoblado" id="amobladoSi">
+							<label for="amobladoSi">Si</label>
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="amobladoPropiedad" value="false" ng-model="publicacion.publication.amoblado">
-							No
+							<input type="radio" name="amoblados" value="no" ng-model="publicacion.publication.amoblado" id="amobladoNo">
+							<label for="amobladoNo">No</label>
 						</div>
 					</div>
 
 					<div class="radioLeft">
 						<b>Antiguedad</b>
 						<div class="radioButton">
-							<input type="radio" name="nuevaPropiedad" value="nueva" ng-model="publicacion.publication.antiguedad">
-							Nueva
+							<input type="radio" name="antiguedad" value="nueva" ng-model="publicacion.publication.antiguedad" id="antiguedadNueva">
+							<label for="antiguedadNueva">Nueva</label>
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="usadaPropiedad" value="usada" ng-model="publicacion.publication.antiguedad">
-							Usada
+							<input type="radio" name="antiguedad" value="usada" ng-model="publicacion.publication.antiguedad" id="antiguedadUsada">
+							<label for="antiguedadUsada">Usada</label>
 						</div>			 
 					</div>
 

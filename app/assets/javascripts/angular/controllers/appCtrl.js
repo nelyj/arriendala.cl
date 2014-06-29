@@ -57,11 +57,11 @@ app.controller('CrearPublicacionCtrl', ['Publication','$scope', function(Publica
 
   $scope.publicacion = {
     publication: {
-      tipo_propiedad: 'casa',
+      tipo_propiedad: 'depto',
       modalidad: 'venta',
-      tipo_arriendo: null,
-      amoblado: null,
-      antiguedad: null,
+      tipo_arriendo: 'mensual',
+      amoblado: 'no',
+      antiguedad: 'nueva',
       banios: null,
       habitaciones: null,
       metros_cuadrados: null,

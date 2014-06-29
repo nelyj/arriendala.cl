@@ -95,6 +95,7 @@ section{
 			color: whitesmoke;
 			font-weight: 300;
 			text-transform: uppercase;
+			width: 30%;
 
 		}
 	}
@@ -257,17 +258,35 @@ label{
 }
 
 .radioLeft{
-	display: block;
 	float: left;
 	width: 100%;
 	b{
 			float: left;
 			margin-right: 20px;
 			font-weight: 700;
+			height: 35px;
+			width: 220px;
 	}
 }
 
 .radioButton{
 	float: left;
-	margin-right: 40px;
+}
+
+input[type=radio]{
+	display: none;
+	margin:10px;
+}
+
+input[type=radio] + label{
+	display: inline-block;
+	margin: -2px;
+  padding: 4px 12px;
+  background-color: #e7e7e7;
+  border-color: #ddd;
+}
+
+input[type=radio]:checked + label { 
+   background-image: none;
+    background-color:#d0d0d0;
 }
