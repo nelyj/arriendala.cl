@@ -62,9 +62,9 @@ app.controller('CrearPublicacionCtrl', ['Publication','$scope', function(Publica
       tipo_arriendo: 'mensual',
       amoblado: 'no',
       antiguedad: 'nueva',
-      banios: null,
-      habitaciones: null,
-      metros_cuadrados: null,
+      banios: 1,
+      habitaciones: 1,
+      metros_cuadrados: 20,
       precio: null
     }
   }
