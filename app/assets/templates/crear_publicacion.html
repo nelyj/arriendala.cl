@@ -7,16 +7,16 @@
 			Nosotros te ayudamos a ganar dinero con tu propiedad
 		</p>
 		<hr />
-		<form name="crearPublicacionForm" ng-submit="crearPublicacionForm.$valid && submiteForm()">
+		<form name="crearPublicacionForm" ng-submit="crearPublicacionForm.$valid && submiteForm()" novalidate>
 
 			<fieldset>
 				<div class="row">
 				<div class="six columns">
 
-					<div class="radioLeft">
+					<div class="radioLeft buttongroup">
 						<b>Tipo de propiedad</b> 
 						<div class="radioButton">
-							<input type="radio" name="tipoPropiedad" value="casa" ng-model="publicacion.tipo_propiedad">
+							<input type="radio" name="tipoPropiedad" value="casa" ng-model="publicacion.publication.tipo_propiedad" />
 									Casa
 						</div>
 						<div class="radioButton">
@@ -28,11 +28,11 @@
 					<div class="radioLeft">
 						<b>Modalidad</b>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="venta" ng-model="publicacion.modalidad">
+							<input type="radio" name="modalidadPropiedad" value="venta" ng-model="publicacion.publication.modalidad">
 							Venta
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="arriendo" ng-model="publicacion.modalidad">
+							<input type="radio" name="modalidadPropiedad" value="arriendo" ng-model="publicacion.publication.modalidad">
 							Arriendo
 						</div>
 					</div>
@@ -40,11 +40,11 @@
 					<div class="radioLeft">
 						<b>Tipo de arriendo</b>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="mensual" ng-model="publicacion.tipo_arriendo">
+							<input type="radio" name="modalidadPropiedad" value="mensual" ng-model="publicacion.publication.tipo_arriendo">
 							Mensual
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="modalidadPropiedad" value="diario" ng-model="publicacion.tipo_arriendo">
+							<input type="radio" name="modalidadPropiedad" value="diario" ng-model="publicacion.publication.tipo_arriendo">
 							Diario
 						</div>
 					</div>	
@@ -52,11 +52,11 @@
 					<div class="radioLeft">
 						<b>Amoblado</b> 
 						<div class="radioButton">
-							<input type="radio" name="amobladoPropiedad" value="true" ng-model="publicacion.amoblado">
+							<input type="radio" name="amobladoPropiedad" value="true" ng-model="publicacion.publication.amoblado">
 							Si
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="amobladoPropiedad" value="false" ng-model="publicacion.amoblado">>
+							<input type="radio" name="amobladoPropiedad" value="false" ng-model="publicacion.publication.amoblado">
 							No
 						</div>
 					</div>
@@ -64,19 +64,18 @@
 					<div class="radioLeft">
 						<b>Antiguedad</b>
 						<div class="radioButton">
-							<input type="radio" name="nuevaPropiedad" value="nueva" ng-model="publicacion.antiguedad">
+							<input type="radio" name="nuevaPropiedad" value="nueva" ng-model="publicacion.publication.antiguedad">
 							Nueva
 						</div>
 						<div class="radioButton">
-							<input type="radio" name="usadaPropiedad" value="usada" ng-model="publicacion.antiguedad">
+							<input type="radio" name="usadaPropiedad" value="usada" ng-model="publicacion.publication.antiguedad">
 							Usada
 						</div>			 
 					</div>
 
 					<div class="radioLeft">
 						<b>N. baños</b> 
-						<select ng-model="publicacion.banios">
-							<option>0</option>
+						<select ng-model="publicacion.publication.banios" required>
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -87,8 +86,7 @@
 
 					<div class="radioLeft">
 						<b>N. habitaciones</b> 
-						<select ng-model="publicacion.habitaciones">
-							<option>0</option>
+						<select ng-model="publicacion.publication.habitaciones" required>
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -99,18 +97,21 @@
 
 					<div class="radioLeft">
 						<b>Mts Cuadrados</b>
-						<input type="text" placeholder="100" ng-model="publicacion.metros_cuadrados"/> 
+						<input type="text" placeholder="100" ng-model="publicacion.publication.metros_cuadrados" required/> 
 					</div>
 
 					<div class="radioLeft">
 						<b>Precio</b> 
-						<input type="text" placeholder="100" ng-model="publicacion.precio" />
+						<input type="text" placeholder="100" ng-model="publicacion.publication.precio" required/>
 					</div>
 
 
 				</div>
 				</div>
 			</fieldset>
+			<div class="large primary btn" ng-class="{'own-button-hide' : crearPublicacionForm.$invalid, 'own-button-show': crearPublicacionForm.$valid}">
+				<input type="submit" name="" value="Guardar" ng-disabled="crearPublicacionForm.$invalid">
+			</div>
 
 		</form>
 	</div>

@@ -52,6 +52,23 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
 
 app.controller('CrearPublicacionCtrl', ['Publication','$scope', function(Publication, $scope){
   $scope.angularClass = "e-profile";
+  $scope.tipoPropiedadValue =
+
+
+  $scope.publicacion = {
+    publication: {
+      tipo_propiedad: 'casa',
+      modalidad: 'venta',
+      tipo_arriendo: null,
+      amoblado: null,
+      antiguedad: null,
+      banios: null,
+      habitaciones: null,
+      metros_cuadrados: null,
+      precio: null
+    }
+  }
+
 }]);
 
 
