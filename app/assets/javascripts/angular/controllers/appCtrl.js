@@ -1,6 +1,8 @@
-var app = angular.module("appCtrl", []);
+//= require angular-flash.js
+var app = angular.module("appCtrl", ['flash']);
 
-app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout', function(Publication, Person, $scope, $timeout){
+app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout','flash', function(Publication, Person, $scope, $timeout, flash){
+
   $scope.publicaciones = Publication.query();
 
   $scope.map = {
@@ -46,13 +48,14 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
     }, 800);
 
   },1200);
-
+  
 
 }]);
 
 app.controller('CrearPublicacionCtrl', ['Publication','$scope', '$location','flash', function(Publication, $scope, $location, flash){
+  flash('CrearPublicacionCtrl');
+
   $scope.angularClass = "e-profile";
-  $scope.tipoPropiedadValue =
   $scope.gPlace;
 
   $scope.publicacion = {
@@ -99,6 +102,7 @@ app.controller('ProfileCtrl', ['Person','$scope','$http','$location', function(P
   $scope.submitForm = function(){
     if ($scope.profileForm.$valid) {
       $scope.newPerson = Person.save($scope.newPerson);
+
       $location.path('/publicaciones');
     }
   };
