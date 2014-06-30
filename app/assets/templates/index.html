@@ -7,7 +7,7 @@
 		</li>	
 	</ul>
 	<ul>
-		<li ng-repeat="publicacion in publicaciones | limitTo:5" class="publicacion" ng-click="">
+		<li ng-repeat="publicacion in publicaciones | limitTo:5" class="publicacion" ng-click="toggle(mapReady)">
 			<a href="#" ng-click="">
 			<div class="publicacionLeft">
 				<div class="title">{{publicacion.modalidad}} de {{publicacion.tipo_propiedad}} | {{publicacion.antiguedad}}</div>

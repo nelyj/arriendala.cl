@@ -46,9 +46,19 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
     $timeout(function(){
       $scope.mapReady = true;
     }, 800);
-
   },1200);
-  
+
+  $scope.toggle = function(mapReady){
+    if(mapReady){
+      console.log(false);
+      $scope.mapReady = false;
+      return false;
+    }else{
+      console.log(true);
+      $scope.mapReady = true;
+      return true;
+    }
+  };
 
 }]);
 
@@ -81,7 +91,6 @@ app.controller('CrearPublicacionCtrl', ['Publication','$scope', '$location','fla
   }
 
 }]);
-
 
 app.controller('ProfileCtrl', ['Person','$scope','$http','$location', function(Person, $scope, $http, $location){
   $scope.angularClass = "e-profile";
