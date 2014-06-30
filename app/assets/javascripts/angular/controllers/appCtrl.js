@@ -53,7 +53,7 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
 app.controller('CrearPublicacionCtrl', ['Publication','$scope', function(Publication, $scope){
   $scope.angularClass = "e-profile";
   $scope.tipoPropiedadValue =
-
+  $scope.gPlace;
 
   $scope.publicacion = {
     publication: {
@@ -65,9 +65,13 @@ app.controller('CrearPublicacionCtrl', ['Publication','$scope', function(Publica
       banios: 1,
       habitaciones: 1,
       metros_cuadrados: 20,
-      precio: null
+      precio: null,
+      address: null
     }
   }
+
+
+
 
 }]);
 
@@ -96,3 +100,20 @@ app.controller('ProfileCtrl', ['Person','$scope','$http','$location', function(P
 
 }]);
 
+app.directive('googleplace', function() {
+    return {
+        link: function(scope, element, attrs) {
+                    var options = {
+                        types: [],
+                        componentRestrictions: {country: 'cl'}
+                    };
+                    scope.gPlace = new google.maps.places.Autocomplete(element[0], options);
+                    element.blur(function(e) {
+                        window.setTimeout(function() {
+                            angular.element(element).trigger('input');
+                        }, 0);
+                    });
+                }
+
+    }
+});

@@ -274,6 +274,38 @@ label{
 	float: left;
 }
 
+.usada{
+	width:106px;
+}
+
+label.precio{
+	margin-bottom: 0px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+input[type="text"].address{
+	width: 350px;
+	font-size: 13px;
+	border: 1px solid;
+	text-align: center;
+	padding: 5px;
+	background-color: #e7e7e7;
+	border-color:#e7e7e7;
+	padding: 10px;
+}
+
+input[type="text"].precio{
+	width: 200px;
+	font-size: 20px;
+	border: 1px solid;
+	text-align: center;
+	padding: 5px;
+	background-color: #e7e7e7;
+	border-color: #e7e7e7;
+	padding: 10px;
+}
+
 input[type=radio]{
 	display: none;
 	margin:10px;

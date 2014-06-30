@@ -1,3 +1,4 @@
+
 <div class="row">
 
 	<div class="twelve columns">
@@ -54,11 +55,6 @@
 							<input type="range" min="20" max="200" ng-model="publicacion.publication.metros_cuadrados" required/> {{publicacion.publication.metros_cuadrados}} Mts&#178;
 
 						</div>
-
-						<div class="radioLeft">
-							<b>Precio</b> 
-							<input type="text" placeholder="100" ng-model="publicacion.publication.precio" required/>
-						</div>
 					</div>
 					<div class="six columns">
 						<div class="radioLeft">
@@ -83,19 +79,20 @@
 									<input type="radio" name="tipoArriendo" value="diario" ng-model="publicacion.publication.tipo_arriendo" id="arriendoDiario">
 									<label for="arriendoDiario">Diario</label>
 								</div>
-							</div>		
+							</div>	
+							<div class="radioLeft">
+								<b>Amoblado</b> 
+								<div class="radioButton">
+									<input type="radio" name="amoblados" value="si" ng-model="publicacion.publication.amoblado" id="amobladoSi">
+									<label for="amobladoSi">Si</label>
+								</div>
+								<div class="radioButton">
+									<input type="radio" name="amoblados" value="no" ng-model="publicacion.publication.amoblado" id="amobladoNo">
+									<label for="amobladoNo">No</label>
+								</div>
+							</div>	
 						</div>
-						<div class="radioLeft">
-							<b>Amoblado</b> 
-							<div class="radioButton">
-								<input type="radio" name="amoblados" value="si" ng-model="publicacion.publication.amoblado" id="amobladoSi">
-								<label for="amobladoSi">Si</label>
-							</div>
-							<div class="radioButton">
-								<input type="radio" name="amoblados" value="no" ng-model="publicacion.publication.amoblado" id="amobladoNo">
-								<label for="amobladoNo">No</label>
-							</div>
-						</div>
+
 
 						<div class="radioLeft">
 							<b>Antiguedad</b>
@@ -105,9 +102,30 @@
 							</div>
 							<div class="radioButton">
 								<input type="radio" name="antiguedad" value="usada" ng-model="publicacion.publication.antiguedad" id="antiguedadUsada">
-								<label for="antiguedadUsada">Usada</label>
+								<label class="usada" for="antiguedadUsada">Usada</label>
 							</div>			 
 						</div>
+
+						<div class="radioLeft">
+							<label>Dirección</label> 
+							<input type="text" googleplace class="address" placeholder="Providencia 975, Santiago" ng-model="publicacion.publication.address" required/>				
+						</div>
+					</div>
+					<div class="twelve columns center">
+
+							<label class="precio"> 
+								<div ng-show="publicacion.publication.modalidad=='arriendo'">
+									Precio
+									{{publicacion.publication.modalidad}}
+									{{publicacion.publication.tipo_arriendo}}
+								</div>
+								<div ng-show="publicacion.publication.modalidad=='venta'">
+									Precio
+									{{publicacion.publication.modalidad}}
+								</div>
+							</label> 
+							<input type="text" class="precio" placeholder="100" ng-model="publicacion.publication.precio" required/>
+
 					</div>
 				</div>
 			</fieldset>

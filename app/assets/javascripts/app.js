@@ -6,7 +6,9 @@
 //= require_tree ./angular/models
 //= require_tree ./angular/controllers
 //= require underscore-min.js
+
 //= require angular-google-maps.min
+
 
 app = angular.module('squapeApp', ['ngAnimate' , 'ngRoute', 'ngResource','PublicationService','PersonService','appCtrl', 'google-maps', 'ngTouch']);
 
