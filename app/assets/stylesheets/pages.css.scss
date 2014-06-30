@@ -363,3 +363,30 @@ select:focus, select:active {
   border:0;
   outline:0;
 }
+
+.messages{
+	list-style: none;
+	position: absolute;
+	z-index: 99999;
+	margin-left: 50%;
+	margin-top: 3%;
+	padding: 1px 80px;
+	font-weight: 700;
+	font-size: 12px;
+		cursor: pointer;
+}
+
+.warning{
+	border: 1px solid #D98C10;
+	background-color: #f39c12;
+}
+
+.success{
+	background-color: #2ecc71;
+	border:1px solid #27ae60;
+	padding: 1px 21px;
+}
+
+ol{
+	list-style: none;
+}
