@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140627235919) do
+ActiveRecord::Schema.define(:version => 20140630042133) do
 
   create_table "enterprises", :force => true do |t|
     t.string   "name"
@@ -60,12 +60,21 @@ ActiveRecord::Schema.define(:version => 20140627235919) do
   create_table "publications", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.integer  "user_id"
     t.string   "address"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "tipo_propiedad"
+    t.string   "modalidad"
+    t.string   "tipo_arriendo"
+    t.string   "amoblado"
+    t.string   "antiguedad"
+    t.integer  "banios"
+    t.integer  "habitaciones"
+    t.integer  "metros_cuadrados"
+    t.float    "precio"
   end
 
   add_index "publications", ["user_id"], :name => "index_publications_on_user_id"
