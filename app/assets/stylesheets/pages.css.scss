@@ -390,3 +390,16 @@ select:focus, select:active {
 ol{
 	list-style: none;
 }
+
+li.sidebar-filter{
+	margin:0px;
+}
+input[type="text"].xwide.input.sidebar{
+	border-radius:0px;
+	width: 85%;
+	background-color:#ecf0f1;
+}
+
+.medium.primary.btn.boton-search{
+	border-radius: 0px;
+}
