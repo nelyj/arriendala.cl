@@ -391,6 +391,10 @@ ol{
 	list-style: none;
 }
 
+a, a:hover{
+	color: #4a4d50;
+}
+
 li.sidebar-filter{
 	margin:0px;
 }
@@ -402,4 +406,43 @@ input[type="text"].xwide.input.sidebar{
 
 .medium.primary.btn.boton-search{
 	border-radius: 0px;
+}
+li.publicacion{
+	background-color: whitesmoke;
+	border-bottom: 1px solid #555555;
+	padding: 15px 20px;
+	height: 120px;
+}
+
+li > .publicacionLeft > .title{
+	text-transform: uppercase;
+font-weight: 700;
+font-size: 10px;
+}
+
+li > .publicacionLeft > .address{
+	font-size: 12px;
+}
+
+.publicacionLeft{
+	float:left;
+}
+
+.publicacionRight{
+	float: right;
+	font-weight: 300;
+font-size: 18px;
+text-align: center;
+}
+
+.publicacionRight > label{
+	font-weight: 700;
+text-transform: uppercase;
+text-align: center;
+font-size: 18px;
+}
+
+.stateOptions{
+	font-size: 13px;
+	font-weight: 700;
 }

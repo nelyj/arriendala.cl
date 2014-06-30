@@ -5,9 +5,37 @@
 			<input class="xwide input sidebar" type="text" placeholder="Buscar por dirección" />
     	<div class="medium primary btn boton-search"><a href="#">Buscar</a></div>
 		</li>	
-</ul>
+	</ul>
+	<ul>
+		<li ng-repeat="publicacion in publicaciones | limitTo:5" class="publicacion" ng-click="">
+			<a href="#" ng-click="">
+			<div class="publicacionLeft">
+				<div class="title">{{publicacion.modalidad}} de {{publicacion.tipo_propiedad}} | {{publicacion.antiguedad}}</div>
+				<div class="address">
+					{{publicacion.address}}
+				</div>
+				<div class="stateOptions">
+					{{publicacion.metros_cuadrados}} Mts&#178; / {{publicacion.habitaciones}} Habitacion
+				</div>
+			</div>
+			<div class="publicacionRight">
+				<label>Valor</label>
+				<br />
+				&#36; {{publicacion.precio}} 
+			</div>
+			</a>
+		</li>
+	</ul>
 </div>
 
 <google-map center="map.center" zoom="map.zoom" draggable='true' ng-if="mapReady">
 	<marker coords="marker" options="map.options"></marker>
+  <markers models="publicaciones" coords="'self'" icon="'icon'" click="'onClicked'"
+         labelContent="'title'" labelAnchor="22 0" labelClass="marker-labels">
+    <windows show="'showWindow'" closeClick="'closeClick'" ng-cloak>
+        <p ng-non-bindable>This is an info window at {{ latitude | number:4 }}, {{ longitude | number:4 }}!</p>
+
+        <p class="muted">My marker will stay open when the window is popped up!</p>
+    </windows>
+</markers>
 </google-map>
