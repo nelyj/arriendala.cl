@@ -50,7 +50,7 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
 
 }]);
 
-app.controller('CrearPublicacionCtrl', ['Publication','$scope', function(Publication, $scope){
+app.controller('CrearPublicacionCtrl', ['Publication','$scope', '$location','flash', function(Publication, $scope, $location, flash){
   $scope.angularClass = "e-profile";
   $scope.tipoPropiedadValue =
   $scope.gPlace;
@@ -70,8 +70,13 @@ app.controller('CrearPublicacionCtrl', ['Publication','$scope', function(Publica
     }
   }
 
-
-
+  $scope.submitForm = function(){
+    if ($scope.crearPublicacionForm.$valid){
+      $scope.newState = Publication.save($scope.publicacion);
+      flash('Saved!');
+      $location.path('/publicaciones');
+    }
+  }
 
 }]);
 

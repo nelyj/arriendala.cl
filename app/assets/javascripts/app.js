@@ -5,12 +5,13 @@
 //= require angular-touch
 //= require_tree ./angular/models
 //= require_tree ./angular/controllers
+//= require angular-flash
 //= require underscore-min.js
 
 //= require angular-google-maps.min
 
 
-app = angular.module('squapeApp', ['ngAnimate' , 'ngRoute', 'ngResource','PublicationService','PersonService','appCtrl', 'google-maps', 'ngTouch']);
+app = angular.module('squapeApp', ['ngAnimate' , 'ngRoute', 'ngResource','PublicationService','PersonService','appCtrl', 'google-maps', 'ngTouch', 'flash']);
 
 app.config(['$routeProvider','$locationProvider', '$httpProvider', 
 	function($routeProvider,$locationProvider, $httpProvider){
