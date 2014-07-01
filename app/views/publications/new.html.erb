@@ -1,6 +1,6 @@
-<div id="app" ng-app="squapeApp">
-	<flash:messages class="messages"></flash:messages>
-	<ng-view class="{{angularClass}}"></ng-view>
-</div>
-	
+<%= simple_form_for @publication, :url=>publicaciones_path do |f| %>
+	<%=f.input :precio %>
+	<%=f.input :image_one %>
 
+	<%= f.submit "Guardar" %>
+<% end %>

@@ -4,8 +4,9 @@ class Publication < ActiveRecord::Base
   :antiguedad, :banios, :habitaciones, :metros_cuadrados, :precio, :image_one
 
 
-  has_attached_file :image_one, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
-  validates_attachment_content_type :image_one, :content_type => /\Aimage\/.*\Z/
+  has_attached_file :image_one, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
 
   geocoded_by :address
   after_validation :geocode

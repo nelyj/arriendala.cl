@@ -103,12 +103,13 @@ app.controller('CrearPublicacionCtrl', ['Publication','$scope', '$location','fla
     for (var i = 0; i < $files.length; i++) {
       var file = $files[i];
       console.log(file);
+      $scope.publicacion.publication.image_one = file;
       $scope.upload = $upload.upload({
         url: '/publicaciones',
-        method: 'POST',
+        //method: 'POST',
         // headers: {'header-key': 'header-value'},
         // withCredentials: true,
-        data: {myObj: $scope.publicacion.publication.image_one },
+        data: {publication: $scope.publicacion },
         file: file, // or list of files: $files for html5 only
         /* set the file formData name ('Content-Desposition'). Default is 'file' */
         //fileFormDataName: myFile, //or a list of names for multiple files (html5).

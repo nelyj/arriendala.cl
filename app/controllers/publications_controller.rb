@@ -42,6 +42,7 @@ class PublicationsController < ApplicationController
   # POST /publications
   # POST /publications.json
   def create
+    logger.debug params[:publication]
     @publication = current_user.publications.new(params[:publication])
 
     respond_to do |format|
