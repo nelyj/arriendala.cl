@@ -59,6 +59,20 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
       
 
       $scope.publicacionShow = publicacion;
+        $scope.map = {
+          center: {
+              latitude: $scope.publicacionShow.latitude,
+              longitude: $scope.publicacionShow.longitude
+          },
+          options:{
+          },
+          zoom: 15
+        };
+
+         $scope.marker = {
+            latitude: $scope.publicacionShow.latitude,
+            longitude: $scope.publicacionShow.longitude
+        };
   };
 
 }]);

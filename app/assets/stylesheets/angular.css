@@ -51,6 +51,17 @@
     display: block;
 }
 
+.mapPublicationShow > .angular-google-map > .angular-google-map-container {
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  float: left;
+  z-index: 10;
+  margin-left: 60px;
+  margin-top: 110px;
+  border: 5px solid;
+}
+
 
 .angular-google-map-container img {
     max-width: none;
