@@ -32,6 +32,9 @@ app.config(['$routeProvider','$locationProvider', '$httpProvider',
 		when('/publicacion/nuevo', {
 			templateUrl: '../assets/crear_publicacion.html',
 			controller: 'CrearPublicacionCtrl'
+		}).
+		otherwise({
+			redirectTo: '/publicaciones'
 		});
 
 		$locationProvider.html5Mode(true);

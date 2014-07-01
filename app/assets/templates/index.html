@@ -2,12 +2,12 @@
 	<ul>
 		<li class="append field sidebar-filter">
 			
-			<input class="xwide input sidebar" type="text" placeholder="Buscar por dirección" />
+			<input class="xwide input sidebar" type="text" placeholder="Búsqueda" ng-model="searchText"  />
     	<div class="medium primary btn boton-search"><a href="#">Buscar</a></div>
 		</li>	
 	</ul>
 	<ul>
-		<li ng-repeat="publicacion in publicaciones | limitTo:5" class="publicacion">
+		<li ng-repeat="publicacion in publicaciones  | filter:searchText | limitTo:5 " class="publicacion">
 			<a href="#" ng-click="toggle(publicacion)">
 			<div class="publicacionLeft">
 				<div class="title">{{publicacion.modalidad}} de {{publicacion.tipo_propiedad}} | {{publicacion.antiguedad}}</div>

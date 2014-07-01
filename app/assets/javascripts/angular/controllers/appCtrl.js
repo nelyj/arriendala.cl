@@ -104,23 +104,9 @@ app.controller('CrearPublicacionCtrl', ['Publication','$scope', '$location','fla
       var file = $files[i];
       console.log(file);
       $scope.publicacion.publication.image_one = file;
-      $scope.upload = $upload.upload({
-        url: '/publicaciones',
-        //method: 'POST',
-        // headers: {'header-key': 'header-value'},
-        // withCredentials: true,
-        data: {publication: $scope.publicacion },
-        file: file, // or list of files: $files for html5 only
-        /* set the file formData name ('Content-Desposition'). Default is 'file' */
-        //fileFormDataName: myFile, //or a list of names for multiple files (html5).
-        /* customize how data is added to formData. See #40#issuecomment-28612000 for sample code */
-        //formDataAppender: function(formData, key, val){}
-      }).progress(function(evt) {
-        console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
-      }).success(function(data, status, headers, config) {
-        // file is uploaded successfully
-        console.log(data);
-      });
+      $scope.newState = Publication.save($scope.publicacion);
+
+
       //.error(...)
       //.then(success, error, progress); 
       //.xhr(function(xhr){xhr.upload.addEventListener(...)})// access and attach any event listener to XMLHttpRequest.
