@@ -1,4 +1,4 @@
-
+{{publicacion}}
 <div class="row">
 
 	<div class="twelve columns">
@@ -109,6 +109,23 @@
 						<div class="radioLeft">
 							<label>Dirección</label> 
 							<input type="text" googleplace class="address" placeholder="Providencia 975, Santiago" ng-model="publicacion.publication.address" required/>				
+						</div>
+
+						<div class="radioLeft fileupload">
+							<input type="text" ng-model="myModelObj">
+							<input type="file" ng-file-select="onFileSelect($files)" >
+									<div ng-show="selectedFiles != null">
+			<div class="sel-file" ng-repeat="f in selectedFiles">
+				{{($index + 1) + '.'}}
+				<img ng-show="dataUrls[$index]" ng-src="{{dataUrls[$index]}}">
+				<button class="button" ng-click="start($index)" ng-show="progress[$index] < 0">Start</button>
+				<span class="progress" ng-show="progress[$index] >= 0">						
+					<div style="width:{{progress[$index]}}%">{{progress[$index]}}%</div>
+				</span>				
+				<button class="button" ng-click="abort($index)" ng-show="hasUploader($index) && progress[$index] < 100">Abort</button>
+				{{f.name}} - size: {{f.size}}B - type: {{f.type}}
+			</div>
+		</div>
 						</div>
 					</div>
 					<div class="twelve columns">

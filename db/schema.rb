@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140630042133) do
+ActiveRecord::Schema.define(:version => 20140701133346) do
+
+  create_table "documents", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "attachment_file_name"
+    t.string   "attachment_content_type"
+    t.integer  "attachment_file_size"
+    t.datetime "attachment_updated_at"
+  end
+
+  add_index "documents", ["user_id"], :name => "index_documents_on_user_id"
 
   create_table "enterprises", :force => true do |t|
     t.string   "name"
@@ -60,8 +72,8 @@ ActiveRecord::Schema.define(:version => 20140630042133) do
   create_table "publications", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
     t.integer  "user_id"
     t.string   "address"
     t.float    "latitude"
@@ -75,6 +87,11 @@ ActiveRecord::Schema.define(:version => 20140630042133) do
     t.integer  "habitaciones"
     t.integer  "metros_cuadrados"
     t.float    "precio"
+    t.string   "image_one_file_name"
+    t.string   "image_one_content_type"
+    t.integer  "image_one_file_size"
+    t.datetime "image_one_updated_at"
+    t.integer  "document_id"
   end
 
   add_index "publications", ["user_id"], :name => "index_publications_on_user_id"

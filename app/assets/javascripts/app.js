@@ -1,4 +1,6 @@
+//= require angular-file-upload-html5-shim.min.js
 //= require angular
+//= require angular-file-upload.min.js 
 //= require angular-animate
 //= require angular-resource
 //= require angular-route

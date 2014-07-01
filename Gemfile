@@ -36,4 +36,5 @@ gem 'rolify'
 gem 'simple_form'
 gem 'country_select'
 gem 'geocoder'
+gem "paperclip", "~> 4.1"
 
