@@ -7,8 +7,8 @@
 		</li>	
 	</ul>
 	<ul>
-		<li ng-repeat="publicacion in publicaciones | limitTo:5" class="publicacion" ng-click="toggle(mapReady)">
-			<a href="#" ng-click="">
+		<li ng-repeat="publicacion in publicaciones | limitTo:5" class="publicacion">
+			<a href="#" ng-click="toggle(publicacion)">
 			<div class="publicacionLeft">
 				<div class="title">{{publicacion.modalidad}} de {{publicacion.tipo_propiedad}} | {{publicacion.antiguedad}}</div>
 				<div class="address">
@@ -39,3 +39,28 @@
     </windows>
 </markers>
 </google-map>
+
+<div class="publicationShow" ng-if="publicationShow" class="publicationShow" ng-model="publicacionShow">
+	<div class="publicationShowTitle"> {{publicacionShow.modalidad}} de {{publicacionShow.tipo_propiedad}} | {{publicacionShow.antiguedad}} </div>
+	<div class="publicationAddress">
+		{{publicacionShow.address}}
+	</div>
+	<div class="publicationShowAddress">
+		<strong>Características</strong>
+		<br />
+		<div class="publicationShowAddressLeft">
+			<strong>Metros Cuadrados: </strong>{{publicacionShow.metros_cuadrados}} Mts&#178;  
+			<div ng-show="publicacionShow.modalidad=='arriendo'">
+				<strong>Tipo de arriendo: </strong>{{publicacionShow.tipo_arriendo}}
+				<br />
+				<strong>Amoblado: </strong>{{publicacionShow.amoblado}}
+			</div>
+		</div>
+		<div class="publicationShowAddressRight">
+			<strong>N. Habitaciones: </strong> {{publicacionShow.habitaciones}} 	
+			<br />
+			<strong>Baños: </strong> {{publicacionShow.banios}}
+		</div>
+		 
+	</div>
+</div>

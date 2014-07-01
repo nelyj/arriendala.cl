@@ -4,7 +4,7 @@ var app = angular.module("appCtrl", ['flash']);
 app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout','flash', function(Publication, Person, $scope, $timeout, flash){
 
   $scope.publicaciones = Publication.query();
-
+  $scope.publicationShow = false;
   $scope.map = {
     center: {
         latitude: -33.4262800,
@@ -48,16 +48,17 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
     }, 800);
   },1200);
 
-  $scope.toggle = function(mapReady){
-    if(mapReady){
-      console.log(false);
+
+  $scope.toggle = function(publicacion){
+      $scope.publicationShow = false;
+      $timeout(function(){
+        $scope.publicationShow = true;
+      }, 800);
+      
       $scope.mapReady = false;
-      return false;
-    }else{
-      console.log(true);
-      $scope.mapReady = true;
-      return true;
-    }
+      
+
+      $scope.publicacionShow = publicacion;
   };
 
 }]);

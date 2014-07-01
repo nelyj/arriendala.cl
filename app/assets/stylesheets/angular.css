@@ -99,3 +99,42 @@ input[disabled=disabled], button:disabled {
   display: inline-block;
 }
 
+.publicationShow{
+  float:right;
+  width: 60%;
+  height: 100%;
+  padding: 20px 60px;
+}
+
+.publicationShow.ng-enter{
+    -webkit-animation: fadeInRight 1s;
+  animation: fadeInRight 1s;
+}
+
+.publicationShow.ng-leave{
+    -webkit-animation: fadeOutLeft 1s;
+  animation: fadeOutLeft 1s;
+}
+
+.publicationShowTitle{
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.publicationAddress{
+  font-size: 28px;
+  font-weight: 100;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.publicationShowAddress > strong{
+  font-size: 14px;
+}
+
+.publicationShowAddressLeft, .publicationShowAddressRight{
+  width: 50%;
+  float: left;
+  margin-top: 15px;
+}
