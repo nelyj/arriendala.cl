@@ -6,12 +6,13 @@
 			/ 	=image_tag "logo.svg", class: 'logo-main'
 
 
-		.twelve.columns
+		.twelve.columns.text-center
 			%h1
 				%strong.optional Encuentra propiedades
-				en tu región
+				%br en tu región
 			%p
-				Registra, busca, se feliz
+				Publica y registra propiedades
+				%strong Gratis
 
 		.centered.nine.columns
 			=link_to user_omniauth_authorize_path(:facebook) do
