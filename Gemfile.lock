@@ -96,7 +96,6 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.3.16)
     oauth2 (0.9.4)
       faraday (>= 0.8, < 0.10)
       jwt (~> 1.0)
@@ -119,6 +118,7 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pg (0.17.1)
     polyglot (0.3.4)
     rack (1.4.5)
     rack-cache (1.2)
@@ -206,9 +206,9 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   modernizr-rails
-  mysql2
   omniauth-facebook
   paperclip (~> 4.1)
+  pg
   rails (= 3.2.16)
   rolify
   rspec-rails
