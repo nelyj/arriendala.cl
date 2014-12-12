@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140701133346) do
+ActiveRecord::Schema.define(:version => 20141212222213) do
 
   create_table "documents", :force => true do |t|
     t.integer  "user_id"
@@ -60,6 +60,18 @@ ActiveRecord::Schema.define(:version => 20140701133346) do
   end
 
   add_index "people", ["user_id"], :name => "index_people_on_user_id"
+
+  create_table "photos", :force => true do |t|
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "asset_file_name"
+    t.string   "asset_content_type"
+    t.integer  "asset_file_size"
+    t.datetime "asset_updated_at"
+    t.integer  "publication_id"
+  end
+
+  add_index "photos", ["publication_id"], :name => "index_photos_on_publication_id"
 
   create_table "plans", :force => true do |t|
     t.string   "name"
