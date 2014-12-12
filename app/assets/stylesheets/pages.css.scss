@@ -463,3 +463,11 @@ font-size: 18px;
 .navbar{
 	background-color: #fff;
 }
+
+.navbar ul li > a{
+	color: #eee;
+}
+
+.navbar ul li:hover>a {
+	background-color: #fff;
+}
