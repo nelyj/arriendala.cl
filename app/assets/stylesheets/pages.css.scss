@@ -471,3 +471,15 @@ font-size: 18px;
 .navbar ul li:hover>a {
 	background-color: #fff;
 }
+
+.email-login{
+	color:white;
+	font-size: 0.8rem;
+	&:hover{
+		color:white;
+	}
+}
+
+.right{
+	float:right;
+}

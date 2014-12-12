@@ -6,14 +6,23 @@
 
 		%h1.four.columns.logo
 			=link_to root_path do
-				=image_tag "logo.svg", width: "155"
+				=image_tag "logo.png", width: "220"
 		%nav.seven.columns.pull_right
 			%ul#main-nave.right
 				-if user_signed_in?
 					%li
 						.medium.primary.btn
 							=link_to "Publicar", "/publicacion/nuevo"
-					%li=link_to "Perfil", "/informacion/perfil"
+					%li
+						=link_to "/informacion/perfil" do
+							-unless current_user.person.nil?
+								Perfil
+							-else
+								-if current_user.person.image_url.nil?
+									Perfil
+								-else
+									=image_tag current_user.person.image_url
+
 					%li=link_to "Salir", destroy_user_session_path, :method => :delete
 				-else
 					%li

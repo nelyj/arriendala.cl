@@ -2,11 +2,13 @@
 	.row
 		.centered.five.columns
 			
-			/ =link_to root_path do
-			/ 	=image_tag "logo.svg", class: 'logo-main'
+			=link_to root_path do
+				=image_tag "logo.png", class: 'logo-main'
+
 
 
 		.twelve.columns.text-center
+			%br
 			%h1
 				%strong.optional Encuentra propiedades
 				%br en tu región
@@ -14,8 +16,8 @@
 				Publica y registra propiedades
 				%strong Gratis
 
-		.centered.nine.columns
+		.centered.nine.columns.text-center
 			=link_to user_omniauth_authorize_path(:facebook) do
 				=image_tag "facebook.png"
-			=link_to registrar_path, class: 'right' do
-				=image_tag "correo.png"
+			%br	
+			=link_to 'O registrate con el correo', registrar_path, class: 'email-login'
