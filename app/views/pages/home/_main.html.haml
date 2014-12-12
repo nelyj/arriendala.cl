@@ -2,15 +2,16 @@
 	.row
 		.centered.five.columns
 			
-			=link_to root_path do
-				=image_tag "logo.svg", class: 'logo-main'
+			/ =link_to root_path do
+			/ 	=image_tag "logo.svg", class: 'logo-main'
 
 
 		.twelve.columns
 			%h1
-				%strong.optional No busques  
-				un lugar para vivir porque  
-				%strong él te encontrará a ti
+				%strong.optional Encuentra propiedades
+				en tu región
+			%p
+				Registra, busca, se feliz
 
 		.centered.nine.columns
 			=link_to user_omniauth_authorize_path(:facebook) do
