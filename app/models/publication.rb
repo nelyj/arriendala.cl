@@ -10,4 +10,5 @@ class Publication < ActiveRecord::Base
   after_validation :geocode
   
   belongs_to :user
+  has_many :photos
 end

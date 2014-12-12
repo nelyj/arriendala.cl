@@ -1,3 +1,5 @@
 class Photo < ActiveRecord::Base
-  # attr_accessible :title, :body
+ :asset
+
+ belongs_to :publication
 end
