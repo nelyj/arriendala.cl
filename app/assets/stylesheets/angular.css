@@ -1,6 +1,6 @@
 
 .menu-app{
-  width: 40%;
+  width: 30%;
   height: 100%;
   float: left;
   background-color: #fff;
@@ -42,7 +42,7 @@
 }
 
 .angular-google-map-container { 
-    width: 60%;
+    width: 70%;
     height: 100%;
     position: absolute;
     float: right;
@@ -56,7 +56,7 @@
   height: 200px !important;
   position: absolute !important;
   z-index: 10 !important;
-  margin-left: 60px !important;
+  margin-left: 70px !important;
   margin-top: 110px !important;
   border: 5px solid !important;
 }
