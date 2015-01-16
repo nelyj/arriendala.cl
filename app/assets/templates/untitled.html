@@ -1,0 +1,16 @@
+	<div class="twelve columns">
+
+							<label class="precio"> 
+								<div ng-show="publicacion.publication.modalidad=='arriendo'">
+									Precio
+									{{publicacion.publication.modalidad}}
+									{{publicacion.publication.tipo_arriendo}}
+								</div>
+								<div ng-show="publicacion.publication.modalidad=='venta'">
+									Precio
+									{{publicacion.publication.modalidad}}
+								</div>
+							</label> 
+							<input type="text" class="precio" placeholder="100" ng-model="publicacion.publication.precio" required/>
+
+					</div>

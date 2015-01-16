@@ -122,6 +122,7 @@ app.controller('CrearPublicacionCtrl', ['Publication','$scope', '$location','fla
     if ($scope.crearPublicacionForm.$valid){
       $scope.newState = Publication.save($scope.publicacion);
       // flash([{ level: 'success', text: 'Ha creado una publicación satisfactoriamente' } ]);
+      console.log($scope.newState);
       $location.path('/publicaciones');
     }
   }

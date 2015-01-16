@@ -33,7 +33,7 @@ app.config(['$routeProvider','$locationProvider', '$httpProvider',
 			templateUrl: '../assets/crear_publicacion.html',
 			controller: 'CrearPublicacionCtrl'
 		}).
-		when('/publicacion/:slug/imagenes',{
+		when('/imagenes',{
 			templateUrl: '../assets/cargar_imagenes.html'
 		}).
 		otherwise({
