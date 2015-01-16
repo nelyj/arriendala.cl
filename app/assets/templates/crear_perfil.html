@@ -14,7 +14,7 @@
 
 			</p>
 			<form name="profileForm" ng-submit="profileForm.$valid && submitForm()" novalidate>
-				<img ng-src="{{ newPerson.person.image_url }}?width=120&height=120" class="centering" alt="">
+				<img width="120" height="120"  ng-src="{{ newPerson.person.image_url }}?width=120&height=120" class="centering" alt="">
 				<fieldset>
 					<ul>
 						<li class="field">
@@ -44,7 +44,7 @@
 					</ul>	
 				</fieldset>
 
-				<div class="large primary btn" ng-class="{'own-button-hide' : profileForm.$invalid, 'own-button-show': profileForm.$valid}">
+				<div class="profile-button large primary btn" ng-class="{'own-button-hide' : profileForm.$invalid, 'own-button-show': profileForm.$valid}">
 					<input type="submit" name="" value="Guardar" ng-disabled="profileForm.$invalid">
 				</div>
 			</form>

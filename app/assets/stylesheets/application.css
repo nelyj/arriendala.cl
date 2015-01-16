@@ -12,5 +12,6 @@
  *= require gumby
  *= require pages
  *= require animate
+ *= require elements
  *= require angular
  */

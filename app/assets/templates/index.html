@@ -1,4 +1,4 @@
-<div class="menu-app" ng-class="{'show': ready } ">
+<div class="menu-app" ng-class="{'show': ready }" style=" overflow: auto; height:90%;">
 	<ul>
 		<li class="append field sidebar-filter">
 			
@@ -7,7 +7,7 @@
 		</li>	
 	</ul>
 	<ul>
-		<li ng-repeat="publicacion in publicaciones  | filter:searchText | limitTo:5 " class="publicacion">
+		<li ng-repeat="publicacion in publicaciones  | filter:searchText" class="publicacion">
 			<a href="#" ng-click="toggle(publicacion)">
 			<div class="publicacionLeft">
 				<div class="title">{{publicacion.modalidad}} de {{publicacion.tipo_propiedad}} | {{publicacion.antiguedad}}</div>

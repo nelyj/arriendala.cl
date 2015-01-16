@@ -26,7 +26,7 @@ section{
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-	  border-bottom: 0.3em solid #F7961D;
+	  height: 100%;
 
 	  .logo-main{
 	  	margin-top: 5em;
@@ -223,7 +223,7 @@ section{
 }
 
 nav{
-	height: 65px;
+	height: 60px;
 }
 
 .navbar ul li > a{
@@ -263,6 +263,8 @@ label{
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
+	width: 120px;
+	height: 120px;
 }
 
 .radioLeft{

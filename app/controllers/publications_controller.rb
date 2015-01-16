@@ -4,7 +4,7 @@ class PublicationsController < ApplicationController
   # GET /publications
   # GET /publications.json
   def index
-    @publications = current_user.publications
+    @publications = Publication.all
 
     respond_to do |format|
       format.html # index.html.erb
