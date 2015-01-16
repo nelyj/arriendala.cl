@@ -1,0 +1,3 @@
+<!-- 				<div class="profile-button large primary btn" ng-class="{'own-button-hide' : profileForm.$invalid, 'own-button-show': profileForm.$valid}">
+					<input type="submit" name="" value="Guardar" ng-disabled="profileForm.$invalid">
+				</div> -->

@@ -79,6 +79,11 @@ app.controller('PublicationCtrl', ['Publication','Person', '$scope', '$timeout',
 }]);
 
 app.controller('CrearPublicacionCtrl', ['Publication','$scope', '$location','flash','$upload', function(Publication, $scope, $location, flash, $upload){
+  $scope.step = 1;
+  
+  $scope.setStep = function(step){
+    $scope.step = step;
+  }
 
   $scope.angularClass = "e-profile";
   $scope.gPlace;

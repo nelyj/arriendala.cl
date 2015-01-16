@@ -1,0 +1,45 @@
+		<h2 class="center">
+			2. Imagenes de tu propiedad
+		</h2>
+		<p class="center">
+			Es importante que subas imagenes de tu propiedad, las personas podrán apreciar mejor lo que ofreces.
+		</p>
+
+		
+		<form name="crearPublicacionForm" ng-submit="crearPublicacionForm.$valid && submitForm()" novalidate>
+			<fieldset>
+				<div class="row">
+					<div class="eleven columns">
+						<div class="row">
+							<div class="four columns">
+								<div class="realstate-image">
+									<a href="#">Click para subir imagen</a>
+								</div>
+							</div>
+							<div class="four columns">
+								<div class="realstate-image">
+									<a href="#">Click para subir imagen</a>
+								</div>
+							</div>
+							<div class="four columns">
+								<div class="realstate-image">
+									<a href="#">Click para subir imagen</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</fieldset>
+
+		<div class="large primary btn right" ng-class="{'own-button-hide' : crearPublicacionForm.$invalid, 'own-button-show': crearPublicacionForm.$valid}">
+				<button type="button" name="" ng-click="setStep(3)">Continuar</button>
+		</div>
+
+				<div class="large primary btn left" ng-class="{'own-button-hide' : crearPublicacionForm.$invalid, 'own-button-show': crearPublicacionForm.$valid}">
+				<button type="button" name="" ng-click="setStep(1)">Atras</button>
+		</div>
+
+
+		</form>

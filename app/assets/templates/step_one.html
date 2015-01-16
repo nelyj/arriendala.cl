@@ -1,0 +1,122 @@
+		<h2 class="center">
+			1. Datos de propiedad
+		</h2>
+		<p class="center">
+			Nosotros te ayudamos a ganar dinero con tu propiedad
+		</p>
+
+		
+		<form name="crearPublicacionForm" ng-submit="crearPublicacionForm.$valid && submitForm()" novalidate>
+
+			<fieldset>
+				<div class="row">
+					<div class="six columns">
+
+						<div class="radioLeft">
+							<b>Tipo de propiedad</b> 
+							<div class="radioButton">
+								<input type="radio" name="tipoPropiedad" value="casa" ng-model="publicacion.publication.tipo_propiedad" id="tipoCasa" />
+										<label for="tipoCasa">Casa</label>
+							</div>
+							<div class="radioButton">
+								<input type="radio" name="tipoPropiedad" value="depto" ng-model="publicacion.publication.tipo_propiedad" id="tipoDepto">
+										<label for="tipoDepto">Departamento</label>
+							</div>
+						</div>
+
+
+						<div class="radioLeft">
+							<b>N. baños</b> 
+							<select ng-model="publicacion.publication.banios" required>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+
+						<div class="radioLeft">
+							<b>N. habitaciones</b> 
+							<select ng-model="publicacion.publication.habitaciones" id="dropdown-custom" required>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+
+						<div class="radioLeft">
+							<b>Mts Cuadrados</b>
+							<input type="range" min="20" max="200" ng-model="publicacion.publication.metros_cuadrados" required/> {{publicacion.publication.metros_cuadrados}} Mts&#178;
+
+						</div>
+					</div>
+					<div class="six columns">
+						<div class="radioLeft">
+							<b>Modalidad</b>
+							<div class="radioButton">
+								<input type="radio" name="modalidadPropiedad" value="venta" ng-model="publicacion.publication.modalidad" id="modalidadVenta">
+								<label for="modalidadVenta">Venta</label>
+							</div>
+							<div class="radioButton">
+								<input type="radio" name="modalidadPropiedad" value="arriendo" ng-model="publicacion.publication.modalidad" id="modalidadArriendo">
+								<label for="modalidadArriendo">Arriendo</label>
+							</div>
+						</div>
+						<div class="toggle" ng-show="publicacion.publication.modalidad=='arriendo'">
+							<div class="radioLeft">
+								<b>Tipo de arriendo</b>
+								<div class="radioButton">
+									<input type="radio" name="tipoArriendo" value="mensual" ng-model="publicacion.publication.tipo_arriendo" id="arriendoMensual">
+									<label for="arriendoMensual">Mensual</label>
+								</div>
+								<div class="radioButton">
+									<input type="radio" name="tipoArriendo" value="diario" ng-model="publicacion.publication.tipo_arriendo" id="arriendoDiario">
+									<label for="arriendoDiario">Diario</label>
+								</div>
+							</div>	
+							<div class="radioLeft">
+								<b>Amoblado</b> 
+								<div class="radioButton">
+									<input type="radio" name="amoblados" value="si" ng-model="publicacion.publication.amoblado" id="amobladoSi">
+									<label for="amobladoSi">Si</label>
+								</div>
+								<div class="radioButton">
+									<input type="radio" name="amoblados" value="no" ng-model="publicacion.publication.amoblado" id="amobladoNo">
+									<label for="amobladoNo">No</label>
+								</div>
+							</div>	
+						</div>
+
+
+						<div class="radioLeft">
+							<b>Antiguedad</b>
+							<div class="radioButton">
+								<input type="radio" name="antiguedad" value="nueva" ng-model="publicacion.publication.antiguedad" id="antiguedadNueva">
+								<label for="antiguedadNueva">Nueva</label>
+							</div>
+							<div class="radioButton">
+								<input type="radio" name="antiguedad" value="usada" ng-model="publicacion.publication.antiguedad" id="antiguedadUsada">
+								<label class="usada" for="antiguedadUsada">Usada</label>
+							</div>			 
+						</div>
+
+<!-- 						<div class="radioLeft">
+							<label>Dirección</label> 
+							<input type="text" googleplace class="address" placeholder="Providencia 975, Santiago" ng-model="publicacion.publication.address" required/>				
+						</div> -->
+
+					</div>
+				
+				</div>
+			</fieldset>
+	<!-- 		<div class="large primary btn right" ng-class="{'own-button-hide' : crearPublicacionForm.$invalid, 'own-button-show': crearPublicacionForm.$valid}">
+				<input type="submit" name="" value="Continuar" ng-disabled="crearPublicacionForm.$invalid">
+			</div> -->
+		<div class="large primary btn right" ng-class="{'own-button-hide' : crearPublicacionForm.$invalid, 'own-button-show': crearPublicacionForm.$valid}">
+				<button type="button" name="" ng-click="setStep(2)">Continuar</button>
+		</div>
+
+		</form>
